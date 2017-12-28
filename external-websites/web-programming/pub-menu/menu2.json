@@ -1,0 +1,27 @@
+{
+  "Item 1": {
+    "Item Name": "THE SUNNY",
+    "Description": "Deep fried English brie, soured grape chutney – griddled asparagus & crumbled Cheshire cheese – heirloom tomato salad & basil dressing – olives & roquito peppers – cracked black pepper potato skins – artisan bread & butter.",
+    "Price": "£13.95"
+  },
+  "Item 2": {
+    "Item Name": "THE COASTAL",
+    "Description": "Prawn cocktail – tuna, mango & lime salsa – chip shop fish & mushy peas – oak smoked salmon – seared salmon fillet – artisan bread & butter.",
+    "Price": "£16.95"
+  },
+  "Item 3": {
+    "Item Name": "THE CHARCUTERIE",
+    "Description": "Sliced cured meats – salami Milano – Serrano ham – wedge of the finest Cheshire cheese – house glazed ham – artisan breads",
+    "Price": "£12.95"
+  },
+  "Item 4": {
+    "Item Name": "CAESAR SALAD",
+    "Description": "A true classic & we don’t mess with those here – romaine lettuce, parmesan & herb croutons – Caesar dressing – soft centred egg.",
+    "Price": "£9.95"
+  },
+  "Item 5": {
+    "Item Name": "QUINOA SALAD",
+    "Description": "Studded with golden raisins, pomegranate & grapes – house leaves.",
+    "Price": "£13.95"
+  }
+}

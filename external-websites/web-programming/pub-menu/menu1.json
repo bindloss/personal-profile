@@ -1,0 +1,27 @@
+{
+  "Item 1": {
+    "Item Name": "FISH & CHIPS",
+    "Description": "Fresh beer battered fish – real chips – mushy peas & thick buttered white bread.",
+    "Price": "£12.95"
+  },
+  "Item 2": {
+    "Item Name": "HOUSE CURRY ",
+    "Description": "Seasonal vegetables simmered in our 14 spice curry sauce – flatbread & real pilau rice.",
+    "Price": "£9.95"
+  },
+  "Item 3": {
+    "Item Name": "PIE OF THE DAY",
+    "Description": "Served with proper mash & mushy peas.",
+    "Price": "£12.95"
+  },
+  "Item 4": {
+    "Item Name": "BRITISH BEEF COTTAGE PIE",
+    "Description": "Prime mince slowly braised down in real gravy – mash – Vimto red cabbage.",
+    "Price": "£13.95"
+  },
+  "Item 5": {
+    "Item Name": "CUMBERLAND SAUSAGE & MASH",
+    "Description": "Our own handmade sausages – mash potato & onion gravy.",
+    "Price": "£11.95"
+  }
+}

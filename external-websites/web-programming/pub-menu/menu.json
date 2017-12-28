@@ -1,0 +1,27 @@
+{
+  "Item 1": {
+    "Item Name": "GRILLED SALMON FILLET",
+    "Description": "Watercress veloute, smoked almonds & crushed new potatoes.",
+    "Price": "£15.95"
+  },
+  "Item 2": {
+    "Item Name": "CHICKEN SCHNITZEL",
+    "Description": "Flattened chicken, dusted with a herb crumb – fried potatoes & house coleslaw.",
+    "Price": "£13.95"
+  },
+  "Item 3": {
+    "Item Name": "GRILLED VEAL CUTLET",
+    "Description": "Lemon hollandaise, gremolata & house leaves.",
+    "Price": "£22.95"
+  },
+  "Item 4": {
+    "Item Name": "THE RUSHTON GRILL",
+    "Description": "They say you are what you eat, that’s why we love our mature, fine British beef! Dry aged & all that, making great tasting meat.",
+    "Price": "£120.00"
+  },
+  "Item 5": {
+    "Item Name": "GAMMON STEAK",
+    "Description": "Prime gammon grilled and topped with sweet chilli glazed pineapple & dippy egg – proper chips.",
+    "Price": "£13.95"
+  }
+}

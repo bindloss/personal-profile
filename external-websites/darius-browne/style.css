@@ -1,0 +1,342 @@
+html {
+  overflow-y: scroll;
+box-sizing: border-box;
+}
+
+*, *:before, *:after {
+box-sizing: inherit;
+
+}
+
+@font-face {
+			font-family: bebas;
+			src: url(bebas.TTF);
+	
+}
+
+.bebas {
+		font-family: bebas, 'Roboto', sans-serif;
+
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	color: #FFF;
+			text-shadow:
+    3px 3px 0 #000,
+    2px 2px 0 #000,
+    3px 3px 0 #000,
+    2px 2px 0 #000;  
+	background-color: #000;
+	
+}
+
+.container {
+	margin: 0px auto;
+
+}
+
+h1, h2, h3 {
+	font-family: bebas;
+	margin: 0;
+	
+}
+
+h1 {
+	font-size: 6rem;
+	margin: 3.5rem;
+	letter-spacing: 2px;
+	
+}
+
+@media screen and (max-width: 768px){
+	h1 {
+		margin: 2rem;
+	}
+}
+
+h2 {
+	font-size: 4rem;
+	letter-spacing: 1px;
+}	
+
+h3 {
+	font-size: 3rem;
+}
+
+p {
+	font-size: 1.1rem;
+	color: #FFF;
+	font-family: "Roboto";
+}
+
+@media screen and (max-width: 768px){
+	h1 {
+		font-size: 4rem;
+		
+		
+	}
+	
+	h2 {
+		font-size: 2rem;
+		
+	}
+	
+	h3 {
+		font-size: 1rem;
+	}
+
+} 
+
+/* 			START OF NAVIGATION 			*/
+
+nav {
+	font-family: bebas, "arial", sans-serif;
+	font-size: 1.2em;
+	text-transform: uppercase;
+    text-align: center;
+	
+	
+}
+
+
+li {
+	display: inline;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+li a {
+    text-decoration: none;
+	border-bottom: 1px solid #FFF;
+	padding-bottom: 1px;
+
+}
+
+a:link {
+color: #FFF;
+}
+
+a:visited {
+color: #FFF;
+}
+
+a:hover {
+  color: #B22222;
+}
+
+a:active {
+    color: #00AABB;
+}
+
+/* 			END OF NAVIGATION 			*/
+
+/* 			START OF HERO IMAGE 			*/
+
+
+.hero {
+	background-color: #888;
+	background-image: url("images/hero.jpg");
+	background-size: cover;
+	background-blend-mode: multiply;
+	height: 95vh;
+	max-width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-top: solid 1px #FFF;
+	border-bottom: solid 1px #FFF;
+
+
+}
+
+.main-heading {
+    outline: 7px solid #fff;
+    outline-offset: 0.1em;
+    display: inline-block;
+	text-align: center;
+	max-width: 100%;
+	margin-top: 1em;
+  
+}
+
+@media screen and (max-width: 767px){
+	.main-heading {
+		margin-top: 1em;
+		width: 90%;
+		
+	}
+	
+}
+
+.description {
+	margin-top: 1em;
+	text-align: center;
+	width: 50%;
+
+	
+}
+
+@media screen and (max-width: 767px){
+	.description {
+		width: 80%;
+	}
+
+}
+
+/* 		END OF HERO IMAGE 			*/
+
+
+/* 			START OF MUSIC 			*/
+
+.music {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+
+
+.left-image {
+	background-color: #888;
+	background-image: url("images/left-image.jpg");
+	background-size: cover;
+	background-blend-mode: multiply;
+	height: 80vh;
+	width: 65%;
+	border-top: solid 1px #FFF;
+	border-bottom: solid 1px #FFF;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+	.left-image {
+		width: 100%;
+	}
+}
+
+.music-heading {
+	text-align: center;
+	margin-top: 1em;
+}
+
+.soundcloud-mobile {
+	display: none;
+	width: 230px;
+}
+
+@media screen and (max-width: 767px) {
+	.soundcloud-mobile {
+		margin: 1em;
+		display: inline-block;
+		
+	}
+}
+
+
+
+.spotify {
+	display: inline-block;
+	margin: 1em;
+	width: 300px;
+	height: 80px;
+}
+
+@media screen and (max-width: 767px){
+	.spotify {
+		
+	}
+}
+
+
+.itunes {
+	display: inline-block;
+
+	
+}
+
+@media screen and (max-width: 767px){
+	.itunes {
+		
+	}
+}
+
+
+
+@media screen and (max-width: 767px) {
+	iframe {
+		display: none;
+		
+	}
+
+}
+
+
+/* 			END OF MUSIC		*/
+
+/* 			START OF YOUTUBE			*/
+
+.youtube-image {
+	background-color: #888;
+	background-image: url(images/youtube.jpg);
+	background-size: cover;
+	background-blend-mode: multiply;
+	height: 80vh;
+	border-top: solid 1px #FFF;
+	border-bottom: solid 1px #FFF;
+}
+
+.youtube-heading {
+	text-align: center;
+	padding-top: 1rem;
+}
+
+.youtube-video {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1rem;
+	width: 800px;
+	height: 400px;
+	max-width: 90%;
+	
+}
+
+@media screen and (max-width: 767px) {
+	.youtube-video {
+		width: 350px;
+		height: 200px;
+	}
+
+}
+
+
+
+/* 			END OF YOUTUBE			*/
+
+/* 			START OF FOOTER 			*/
+
+footer {
+	text-align: center;
+	background-color: #2B2C2E;
+	padding-bottom: 1em;
+	padding-top: 1em;
+	
+	
+}
+
+.footer-content {
+	
+	
+}
+
+
+/* 			END OF FOOTER 			*/
+
+
+

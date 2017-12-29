@@ -370,28 +370,29 @@ COLOUR OF BACKGROUND IMAGE: #1D2344
 .prog-lang-title {
 	font-family: "Raleway", sans-serif;
 	letter-spacing: 0;
-	text-transform: none;
-	margin-top: 1em;
-	font-size: 1.4rem;
-	color: #000;
+	text-transform: uppercase;
+	padding-top: 1em;
+	font-size: 1.7em;
+	color: #1D2344;
+	font-weight: 900;
 }
 
 .prog-lang {
 	list-style: none;
-	font-family: "Roboto", sans-serif;
+	font-family: "Raleway", sans-serif;
 	padding: 0;
+	font-size: 1.2em;
 	
 }
 
 .prog-lang li{
 	display: inline-block;
-	padding: 5px;
+	padding: 10px;
 	
 }
 
-
 .slide-position {
-	border: 10px solid #FFF;
+	padding: 1em 0 2em 0;
 
 	
 }
@@ -406,29 +407,29 @@ COLOUR OF BACKGROUND IMAGE: #1D2344
 .mySlides {
 	display: none;
 	max-width: 100%;
-	background-color: #222;
-	margin: 0;
-	padding: 5em;
-	height: 300px;
-	color: #FFF;
-	border-radius: 5em;
-}
-
-.mySlides p {8
-	color: #FFF;
-	padding: 1em 0;
-	max-width: 600px;
+	background-color: #FFF;
 	margin: 0 auto;
-	text-align: center;
+	height: 360px;
+	padding: 0 1em;
 }
 
 .quote {
 	text-align: center;
-	font-size: 1.4rem;
-	color: #FFF;
-	margin: 0;
-
+	font-size: 1.3rem;
+	color: #222;
+	text-align: center;
+	margin: 0 auto;
+	padding: 0em 1em;
 	
+}
+
+.mySlides p {
+	color: #222;
+	padding: 1em 1em 0;
+	max-width: 600px;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 1.1rem;
 }
 
 .display-container {
@@ -440,46 +441,119 @@ COLOUR OF BACKGROUND IMAGE: #1D2344
 }
 
 .center {
-	text-align: center;
-	color: #FFF;
-	margin-bottom: 10px;
 	font-size: 50px;
 	position:absolute;
 	left:50%;
 	bottom:0;
 	transform:translate(-50%,0%);-ms-transform:translate(-50%,0%);
 	width: 100%;
+
 }
-
-
+	
 .left {
-	cursor: pointer;
-	float: left;
-	color: #1AC8ED;
-	margin-left: 100px;
+	display: none;
+	
 }
 
 .right {
-	float: right;
-	cursor: pointer;
-	color: #1AC8ED;
-	margin-right: 100px;
+	display: none;
 }
 
 .circles {
 	cursor: pointer;
-	height: 20px;
-	width: 200px;
-	color: #1A8CED;
+	width: 100px;
+	height: 25px;
+	color: #1D2444;
 	display: inline-block;
 	text-align: center;
-	border: 2px solid #1AC8ED;
-	background-color: transparent;
+	border: 2px solid #1d2444;
+	margin: 0;
+}
+
+@media screen and (min-width: 450px) {
+	.mySlides {
+		height: 300px;
+	}
+}
+
+@media screen and (min-width: 510px) {
+	.mySlides {
+		height: 280px;
+	}
+}
+
+@media screen and (min-width: 560px) {	
+	.left, .right{
+		display: block;
+		cursor: pointer;
+		color: #1d2444;
+	}
+	
+	.left {
+		float: left;
+	}
+	
+	.right {
+		float: right;
+	}
+	
+}
+
+@media screen and (min-width: 632px) {
+	.mySlides {
+		height: 250px;
+	}
+	.circles {
+		width: 150px;
+	}
+}
+
+@media screen and (min-width: 880px) {
+	.quote {
+		width: 800px;
+	}
+	.circles {
+		width: 200px;
+	}
 }
 
 
+
+
+	
+/*
+
+	
+@media screen and (min-width: 831px) {
+	.circles {
+		width: 150px;
+		height: 20px;
+		
+		
+	}
+	
+	.left {
+		margin-left: 0px;
+		display: block;
+		float: left;
+		cursor: pointer;
+		color: #1d2444;
+	}
+	
+	.right {
+		margin-right: 0px;
+		display: block;
+		float: right;
+		cursor: pointer;
+		color: #1d2444;
+	}
+}
+
+*/
+
+
 .white, .hover-white:hover {
-	background-color: #1AC8ED;
+	background-color: #1D2444;
 }
 
 

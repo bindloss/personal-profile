@@ -1,5 +1,5 @@
 var myImage = document.getElementById("mainImage");
-var imageArray = ["images/richard-brown.jpg", "images/dariusbrowne.jpg", "images/business-school.jpg"];			 
+var imageArray = ["images/instawatch-portfolio.jpg", "images/richard-brown.jpg", "images/business-school.jpg"];			 
 var imageIndex = 0;
 function changeImage() {
 myImage.setAttribute("src",imageArray[imageIndex]);

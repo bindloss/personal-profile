@@ -1,151 +1,122 @@
 <!DOCTYPE html>
 <html lang="en-gb">
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="Blog posts about the digital industry, performance and optimization and the process of building this site by Sam Bindloss, professional web developer">
-        <meta name="keywords" content="Blog, Student Coursework, Digital industry, Performance, Optimization, Web development process, personal profile, building this site">
-        <meta name="author" content="Sam Bindloss">
-        <meta name="viewport" content="width-device-width, initial-scale=1.0"> 
-        
-        <!--[if lt IE 9]> 
+
+<head>
+	<meta charset="utf-8">
+	<meta content="Blog posts about the digital industry, performance and optimization and the process of building this site by Sam Bindloss, professional web developer" name="description">
+	<meta content="Blog, Student Coursework, Digital industry, Performance, Optimization, Web development process, personal profile, building this site" name="keywords">
+	<meta content="Sam Bindloss" name="author">
+	<meta content="width-device-width, initial-scale=1.0" name="viewport">
+
+	<!--[if lt IE 9]> 
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
-        <![endif]--> 
-        
+        <![endif]-->
+	<!-- Google analytics   -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
 
- 	 <link rel="icon" 
-     type="image/ico" 
-     href="images-pp/favicon1.ico">
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-102699117-1">
 
-<title>Sam Bindloss - Blog</title>
-      
-      <!-- ACCESSIBILITY CHECKER -> FANGS -->
-      
-    <link rel="stylesheet" href="style.css">
-	
-<!-- 	Google Fonts 	 -->
+	</script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
 
-<link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Coustard" rel="stylesheet">
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'UA-102699117-1');
+	</script>
 
-<!-- Don't need to use AREA ROLES ANYMORE - RESEARCH OTHER WAYS, reached a point where most people who need them have the technology to bypass area roles now, Use other forms of accessibilty !important -->
+	<link href="images-pp/favicon1.ico" rel="icon" type="image/ico">
+	<title>Blog - Sam Bindloss</title>
 
+	<link href="style.css" rel="stylesheet">
+
+	<!--    Google Fonts     -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Coustard" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 </head>
 
 <body id="top">
-<header>
-
-	<div class="nav-container">
-	<nav>
-		<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="portfolio.html">Portfolio</a></li>
-			<li><a href="blog.html">Blog</a></li>
-			<li><a href="contact.html">Contact</a></li>
-		</ul>
-	</nav>
-	</div>
-
-</header>
-
-<section class="blog-banner">
-	
-<h1 class="main-heading">Blog</h1>
-	
-</section>
-
-<section class="work">
-
-	<p class="work-intro">Do you want to know more about the digital industry? What about the process of how I made this site? If so, you're in the right place.</p>
-
-</section>
-
-<section class="flex-container2">
-		
-		<article class="content">
-		
-		<!-- 	The industry 	-->
-	
-			<div class="image-flex">
-			
-			<img src="images/workplace.jpg" alt="Birds eye view of employees working in a digital environment" width="800" height="540">
-			
-			<div class="image-caption">
-			<h3>The industry</h3>
-			
-			<a href="blog-posts/industry.html" class="index-button" title="The digital industry blog post">Read</a>
-				
-			</div>
-				
-			<div class="blog-description">
-				
-			<p class="index-center">The digital industry is growing incredibly fast, check out my blog post on the research I have done into this industry.</p>
-			
-			</div>
-				
-			</div>
-			
-				<!-- 	Optimization	-->
-			
-			<div class="image-flex">
-			
-			<img class="image-background" src="images/optimization.jpg" alt="Example of a developer optimizing images for the web" width="800" height="540">
-			
-			<div class="image-caption">
-				<h3>Optimization</h3>
-
-				<a href="blog-posts/optimization.html" class="index-button" title="Optimization blog post">Read</a>
-				
-			</div>
-
-			<div class="blog-description">
-			
-				<p class="index-center">Optimizing for the web is important. Sometimes, people need to realise that flashy, high-resolution images aren't always the best option for the web.</p>
-
-			</div>
-
+	<header>
+		<div class="nav-container">
+		<nav>
+			<ul>
+				<li>
+					<a href="index.html">Home</a>
+				</li>
+				<li>
+					<a href="portfolio.html">Portfolio</a>
+				</li>
+				<li>
+					<a href="blog.html">Blog</a>
+				</li>
+				<li>
+					<a href="contact.html">Contact</a>
+				</li>
+			</ul>
+		</nav>
 		</div>
-	</article>
-</section>
-			
-			<!-- 	My personal site	-->
-			
-<div class="image-flex">
-		
-		<img class="mobile-display" src="images/sam-working-mobile.jpg" alt="Sam hard at work on a website" width="800" height="550">
-	
-		<img class="desktop-display" src="images/sam-working-desktop.jpg" alt="Sam hard at work on a website" width="1400" height="455">
+	</header>
+	<section class="blog-banner">
+		<h1 class="intro-heading">Blog</h1>
+	</section>
+	<section class="blog">
+		<section class="blog-intro">
+			<p>Do you want to know more about the digital industry? What about the process of how I made this site? If so, you're in the right place.</p>
+		</section>
+		<div class="triangle-right"></div>
+		<section class="blog-container3">
+			<article class="blog-content">
 
-	<div class="image-caption">
-		<h3>Building my Portfolio</h3>
+				<!--    The industry    -->
+				<div class="view view-transition">
+					<img alt="Birds eye view of employees working in a digital environment" height="632" src="images/workplace.jpg" width="478">
+					<div class="mask">
+						<h2>The industry</h2>
+						<p>The digital industry is growing incredibly fast, check out my blog post on the research I have done into this industry.</p><a class="info" href="blog-posts/industry.html">Read More</a>
+					</div>
+				</div>
 
-		<a href="blog-posts/build.html" class="index-button" title="How I built my own website blog post">Read</a>
+				<!--    Optimization    -->
+				<div class="view view-transition">
+					<img alt="Example of a developer optimizing images for the web" height="632" src="images/optimization.jpg" width="478">
+					<div class="mask">
+						<h2>Optimization</h2>
+						<p>Optimizing for the web is important. Sometimes, people need to realise that flashy, high-resolution images aren't always the best option for the web.
+						</p><a class="info" href="blog-posts/optimization.html">Read More</a>
+					</div>
+				</div>
 
-	</div>
-
-	<div class="blog-description">
-		<p class="index-center">Take a journey with me on how I created this site! Explore all the different decisions I made to end up with the finished product you currently see now.</p>
-	</div>
-</div>
-			
-<footer>
-	<a href="#top"><img class="back" src="images/back-to-top.png" alt="Navigational button which directs the user to top of the page" width="75" height="40"/></a>
-
-		<p class="footer-items">
-			&copy; Sam Bindloss <a href="http://www2.mmu.ac.uk/" title="MMU Homepage"><br>MMU 2017</a>
-		</p>
-
-		<p class="footer-items">Social media: <br>
-			<a class="social-media" href="https://uk.linkedin.com/in/sam-bindloss-62516a103"> <img src="images/linked-in-logo.png" alt="Linked in for Sam Bindloss" width="48" height="48"> </a>
-
-			<a class="social-media" href="https://twitter.com/SamBindloss"> <img src="images/twitter-logo.png" alt="Twitter for Sam Bindloss" width="48" height="48"> </a>
-		</p>
-
-	<div class="hire">
-		<h3 class="hire-item"><a href="contact.html">Available for hire.</a></h3>
-	</div>
-</footer>
-
+				<!--    My personal site    -->
+				<div class="view view-transition">
+					<img alt="Sam hard at work on a website" height="632" src="images/sam-working-mobile.jpg" width="478">
+					<div class="mask">
+						<h2 class="personal-site-heading">Personal site</h2>
+						<p>Take a journey with me on how I created the first version of my site! Explore all the different decisions I made to end up with the finished product you currently see now.</p><a class="info" href="blog-posts/build.html">Read More</a>
+					</div>
+				</div>
+			</article>
+		</section>
+	</section>
+	<footer>
+		<a href="#top"><img alt=
+		"Navigational button which directs the user to top of the page" class="back"
+		height="40" src="images/back-to-top.png" width="75"></a>
+		<p class="footer-items">&copy; Sam Bindloss <a href="http://www2.mmu.ac.uk/" title="MMU Homepage"><br>
+		MMU 2017</a></p>
+		<p class="footer-items">Social media:<br>
+			<a class="social-media" href="https://uk.linkedin.com/in/sam-bindloss-62516a103"><img alt=
+		"Linked in for Sam Bindloss" height="48" src="images/linked-in-logo.png"
+		width="48"></a> <a class="social-media" href="https://twitter.com/SamBindloss"><img alt="Twitter for Sam Bindloss" height=
+		"48" src="images/twitter-logo.png" width="48"></a></p>
+		<div class="hire">
+			<h3 class="hire-item"><a href="contact.html">Available for hire.</a></h3>
+		</div>
+	</footer>
 </body>
+
 </html>

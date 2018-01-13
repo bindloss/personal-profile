@@ -273,7 +273,6 @@ COLOUR OF BACKGROUND IMAGE: #1D2344
 	max-width: 100%;
 	background-color: #FFF;
 	margin: 0 auto;
-	height: 360px;
 	padding: 0 1em;
 }
 
@@ -283,7 +282,7 @@ COLOUR OF BACKGROUND IMAGE: #1D2344
 	color: #222;
 	text-align: center;
 	margin: 0 auto;
-	padding: 1em 1em 0 1em;
+	padding: 1em 0.5em 0 0.5em;
 
 }
 
@@ -355,13 +354,26 @@ COLOUR OF BACKGROUND IMAGE: #1D2344
 
 .circles {
 	cursor: pointer;
-	width: 60px;
+	width: 30px;
 	height: 30px;
+	border-radius: 50%;
 	color: #1D2444;
 	display: inline-block;
 	text-align: center;
 	border: 2px solid #1d2444;
 
+}
+
+@media screen and (min-width: 320px) {
+	.mySlides {
+		height: 430px;
+	}
+}
+
+@media screen and (min-width: 360px) {
+	.mySlides {
+		height: 380px;
+	}
 }
 
 @media screen and (min-width: 450px) {
@@ -381,7 +393,7 @@ COLOUR OF BACKGROUND IMAGE: #1D2344
 	.right {
 		display: block;
 		cursor: pointer;
-		color: #1d2444;
+		color: #1D2444;
 	}
 
 	.left {
@@ -401,9 +413,6 @@ COLOUR OF BACKGROUND IMAGE: #1D2344
 	.mySlides {
 		height: 250px;
 	}
-	.circles {
-		width: 150px;
-	}
 }
 
 @media screen and (min-width: 880px) {
@@ -411,7 +420,8 @@ COLOUR OF BACKGROUND IMAGE: #1D2344
 		width: 800px;
 	}
 	.circles {
-		width: 200px;
+		width: 20px;
+		height: 20px;
 	}
 }
 
@@ -449,9 +459,21 @@ COLOUR OF BACKGROUND IMAGE: #1D2344
 	overflow: hidden;
 	position: relative;
 	text-align: center;
-	box-shadow: 3px 4px 6px 6px lightgray;
+	box-shadow: 3px 4px 3px 3px lightgray;
 	cursor: default;
 
+}
+
+@media screen and (min-width: 320px) {
+	.view p {
+		font-size: 13px;
+	}
+}
+
+@media screen and (min-width: 360px) {
+	.view p {
+		font-size: 17px;
+	}
 }
 
 @media screen and (min-width: 800px) {
@@ -498,12 +520,17 @@ COLOUR OF BACKGROUND IMAGE: #1D2344
 }
 
 .view p {
-	font-size: 17px;
 	font-style: italic;
+	font-weight: 900;
 	position: relative;
 	color: #fff;
 	padding: 0 5px 0 5px;
 	text-align: center;
+	text-shadow: 
+	1px 1px 0 #000,
+	1px 1px 0 #000,
+	1px 1px 0 #000,
+	1px 1px 0 #000;
 
 }
 
@@ -579,10 +606,10 @@ COLOUR OF BACKGROUND IMAGE: #1D2344
 }
 
 .mask {
-	background-color: rgba(0, 0, 30, 0.6);
+	background-color: rgba(0, 0, 10, 0.5);
 }
 
-/* Transition elements */
+/* ---- Transition elements ----- */
 
 @media screen and (min-width: 850px) {
 
@@ -609,8 +636,6 @@ COLOUR OF BACKGROUND IMAGE: #1D2344
 		transform: translateY(100px);
 		transition: all 0.3s ease-in-out 0.1s;
 	}
-
-
 	.view-transition:hover .mask {
 		opacity: 1;
 		transition-delay: 0s;
@@ -673,25 +698,30 @@ COLOUR OF BACKGROUND IMAGE: #1D2344
 .port-intro {
 	background-color: #222;
 	font-family: "Raleway", sans-serif;
-	font-weight: 900;
+	font-weight: 600;
 	color: #FFF;
 	padding: 3em 0 3em 0;
 
-}
-
-@media screen and (min-width: 800px) {
-	.port-intro {
-		padding: 6em 0 3em 0;
-	}
 }
 
 .port-intro p {
 	max-width: 600px;
 	margin: 0 auto;
 	text-align: center;
-	font-size: 1.3rem;
+	font-size: 1rem;
 	padding: 0 1em;
 }
+
+@media screen and (min-width: 800px) {
+	.port-intro {
+		padding: 6em 0 3em 0;
+	}
+
+	.port-intro p {
+		font-size: 1.3rem;
+	}
+}
+
 
 .portfolio-item {
 	position: relative;
@@ -711,7 +741,7 @@ COLOUR OF BACKGROUND IMAGE: #1D2344
 
 .rectangle {
 	width: 100%;
-	height: 15px;
+	height: 5px;
 	background: #222;
 	padding: 0;
 	margin: 0;
@@ -742,14 +772,14 @@ COLOUR OF BACKGROUND IMAGE: #1D2344
 
 .mobile-display,
 .sg-mobile-display,
-.ftsth-mobile-display {
+.ftsth-mobile-display, .ux-mobile-display {
 	display: block;
 
 }
 
 .desktop-display,
 .sg-desktop-display,
-.ftsth-desktop-display {
+.ftsth-desktop-display, .ux-desktop-display {
 	display: none;
 
 }
@@ -759,10 +789,17 @@ COLOUR OF BACKGROUND IMAGE: #1D2344
 	display: inline-block;
 	font-family: "Coustard", serif;
 	margin: 1em 0 1em 0;
+	/*
 	outline: 2px solid #1D2344;
 	outline-offset: 3px;
-	padding: 0 30px;
+	*/
+	border: 2px solid #222;
+	padding: 10px 30px;
 	text-transform: none;
+}
+
+.portfolio-button(2n) {
+	background-color: #E9F0F0;
 }
 
 .portfolio-button:last-child {
@@ -874,11 +911,16 @@ COLOUR OF BACKGROUND IMAGE: #1D2344
 
 	.mobile-display,
 	.sg-mobile-display,
-	.ftsth-mobile-display {
+	.ftsth-mobile-display, .ux-mobile-display {
 		display: none;
 	}
 
 	.desktop-display {
+		display: block;
+		margin-top: 4em;
+	}
+	
+	.ux-desktop-display {
 		display: block;
 		margin-top: 4em;
 	}
@@ -898,10 +940,6 @@ COLOUR OF BACKGROUND IMAGE: #1D2344
 		font-size: 2.5rem;
 
 	}
-	.white-background {
-		padding: 2em 2em;
-	}
-
 }
 
 @media screen and (min-width: 1150px) {
@@ -1040,24 +1078,28 @@ COLOUR OF BACKGROUND IMAGE: #1D2344
 .blog-intro {
 	background-color: #222;
 	font-family: "Raleway", sans-serif;
-	font-weight: 900;
+	font-weight: 600;
 	color: #FFF;
 	padding: 3em 0 3em 0;
 
-}
-
-@media screen and (min-width: 800px) {
-	.blog-intro {
-		padding: 6em 0 3em 0;
-	}
 }
 
 .blog-intro p {
 	max-width: 600px;
 	margin: 0 auto;
 	text-align: center;
-	font-size: 1.3rem;
+	font-size: 1rem;
 	padding: 0 1em;
+}
+
+@media screen and (min-width: 800px) {
+	.blog-intro {
+		padding: 6em 0 3em 0;
+	}
+
+	.blog-intro p {
+		font-size: 1.3rem;
+	}
 }
 
 .triangle-right {
@@ -1075,7 +1117,6 @@ COLOUR OF BACKGROUND IMAGE: #1D2344
 }
 
 .blog {
-	background-color: #E9F0F0;
 	margin: 0;
 }
 
@@ -1195,23 +1236,26 @@ COLOUR OF BACKGROUND IMAGE: #1D2344
 	padding: 3em 0 3em 0;
 }
 
+.contact-intro p {
+	max-width: 600px;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 1.2rem;
+	padding: 0 1em;
+}
 
 @media screen and (min-width: 800px) {
 	.contact-intro {
 		padding: 5em 0 1em 0;
 	}
-}
+	.contact-intro p {
+		font-size: 1.3rem;
+	}
 
-.contact-intro p {
-	max-width: 600px;
-	margin: 0 auto;
-	text-align: center;
-	font-size: 1.3rem;
-	padding: 0 1em;
 }
 
 .contact {
-	background-color: #E9F0F0;
+	background-color: #FFF;
 }
 
 .github {
@@ -1268,6 +1312,7 @@ input {
 	border: solid 3px #2E2D2D;
 	outline: none;
 	font-size: 1rem;
+	font-weight: 500;
 }
 
 textarea {
@@ -1276,19 +1321,27 @@ textarea {
 	margin: 7px 0;
 	border: solid 3px #2E2D2D;
 	outline: none;
+	font-weight: 500;
+	font-size: 1rem;
 }
 
 
 input[type=submit] {
-	background-color: #FFF;
 	margin: 0.5em auto;
 	width: 25%;
 	font-family: "Roboto", sans-serif;
 	text-transform: uppercase;
 	font-size: 0.8rem;
+	font-weight: 900;
 	cursor: pointer;
 	font-family: "Coustard", serif;
+	background-color: #E9F0F0;
 
+}
+
+input[type=submit]:hover {
+	text-decoration: underline;
+	color: #1AC8ED;
 }
 
 .contact-footer {
@@ -1304,77 +1357,114 @@ input[type=submit] {
 /*  -------- FOOTER -------- */
 
 footer {
-	background-color: #222;
+	background-color: #232323;
 	color: #FFF;
-	height: 370px;
-	margin-top: 2em;
+}
 
+footer::after {
+	content: "";
+	display: block;
+	clear: both;
 }
 
 .back {
-	margin: 1em;
-	cursor: pointer;
-	display: inline-block;
-}
-
-.footer-list {
-	margin: 0 1em;
-}
-
-.footer-items {
-	margin-top: 1em;
-	font-size: 1.3rem;
-	font-family: 'Lobster', cursive;
-	padding-left: 1em;
+	padding-top: 1em;
 
 }
 
-.footer-items a {
-	font-size: 1.1rem;
-	font-family: 'Roboto', sans-serif;
+.footer-container {
+	padding: 4em 1em 2em 1em;
 }
 
-.social-media {
-	display: inline-block;
-
+@media screen and (min-width: 1000px) {
+	.footer-container {
+		padding-bottom: 10em;
+	}
 }
 
-.social-media:last-child {
-	padding-left: 1em;
+/* 	---- 	Column System 	----- 	*/
+
+[class^=col-] {
+	text-align: left;
+	width: 100%;
 }
 
-.hire {
-	margin-right: 1.3em;
-	margin-top: 1em;
-	text-align: right;
+.col-2,
+.col-1 {
+	line-height: 0;
 }
 
-.hire-item {
-	font-family: 'Lobster', cursive;
-	color: #FFF;
-	text-transform: none;
-	font-size: 2.4rem;
-
+.col-1 {
+	font-size: 20px;
+	padding-top: 2em;
 }
 
-.hire-item a {
-	color: #FFF;
+.col-2 h4 {
+	font-family: "Coustard", serif;
+	font-size: 30px;
 	font-weight: 500;
-	text-decoration: underline;
+	margin: 0;
 }
 
-.hire-item a:hover {
+.col-2 p {
+	padding-top: 1em;
+}
+
+
+.col-1 h4 {
+	font-family: "Coustard", serif;
+	font-weight: 500;
+	font-size: 20px;
+	margin: 0;
+}
+
+@media screen and (min-width: 810px) {
+	[class^=col-] {
+		float: left;
+		padding: 0 2em;
+	}
+
+	.col-2 {
+		width: 50%;
+	}
+
+	.col-1 {
+		width: 25%;
+		font-size: 1rem;
+
+	}
+
+	[class^=col-]:first-child {
+		padding-left: 0;
+	}
+
+	[class^=col-]:last-child {
+		padding-right: 0;
+	}
+}
+
+.social-media-images {
+	padding-top: 1em;
+}
+
+.social-media-images:hover {
+	background-color: #1AC8ED;
+	border-radius: 100%;
+	padding-top: 0;
+}
+
+.col-1 a, .col-2 a {
+	font-family: "Roboto", sans-serif;
+}
+
+.col-2 a,
+.col-1 a {
 	color: #1AC8ED;
 }
 
-
-footer a:link {
-	color: #1AC8ED;
-}
-
-footer a:hover {
-	cursor: pointer;
-	color: #1AC8ED;
+.col-2 a:hover,
+.col-1 a:hover {
+	color: #FFF;
 }
 
 /*  -------- END OF FOOTER -------- */

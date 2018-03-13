@@ -6,7 +6,7 @@
 	<meta content="Portfolio of Sam Bindloss, Web Development student at Manchester Metropolitan University which includes all previous work" name="description">
 	<meta content="Portfolio, Student Coursework, Project Websites, Project Details, Freshers Focus, Student Guide, Web Programming, Darius Browne" name="keywords">
 	<meta content="Sam Bindloss" name="author">
-	<meta content="width-device-width, initial-scale=1.0" name="viewport">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 
 	<!--[if lt IE 9]> 
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
@@ -30,7 +30,10 @@
 
 	</script>
 
-	<link href="images-pp/favicon1.ico" rel="icon" type="image/ico">
+	<!-- Font awesome and Favicon -->
+	<link href="images/favicon1.ico" rel="icon" type="image/ico">
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+	
 	<title>Portfolio - Sam Bindloss</title>
 
 	<link href="style.css" rel="stylesheet">
@@ -39,7 +42,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Coustard" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 </head>
 
@@ -64,144 +67,225 @@
 			</nav>
 		</div>
 	</header>
+	
+	<button title="Back to top" id="myBtn" class="scroll" role="button">
+        <span class="arrow-up">
+        	<img src="images/chevron-up.png" alt="Up arrow" width="32" height="32">
+        </span>
+    </button>
+
+	<!-- CHANGE ALL H3'S TO H2's -->
+
 	<section class="portfolio-banner">
 		<h1 class="intro-heading">Portfolio</h1>
 	</section>
+
 	<section class="port-intro">
 		<p>Here you can find all of my previous work ranging from group projects at university, to individual projects I have worked on in my own time.</p>
 	</section>
-	<article class="all-projects">
-		<div class="triangle-left"></div>
 
-		<!-- Freshers Focus -->
-		<div class="portfolio-item">
-			<div class="portfolio-image-container"><img alt="Home screen of the freshers focus website" class="mobile-display" height="496" src="images/ff-mobile.jpg" width="890"> <img alt="Home screen of the freshers focus website" class="desktop-display" height="1124" src="images/ff-desktop.jpg" width="900"></div>
-			<div class="portfolio-content-container">
-				<div class="project-details">
-					<h3 class="large-project-title">Freshers Focus</h3>
-					<h4 class="project-details-title">Website (Group project)</h4>
-					<p>This unit was a challenging student-led project to develop the understanding, skills and experience in running with Digital Management projects. It focused more on the behind the scenes rather than the final deliverable (website) itself.</p>
-					<p>As the joint project manager to this unit, I got an insight into what it is like leading a group and understanding the pressure of reaching organised and precise short term goals before reaching the final end product.
+	<!--	<div class="triangle-left"></div> -->
+
+	<!--    MG Property Services   -->
+	<div class="rectangle"></div>
+
+	<section class="portfolio-item-container">
+	
+	<img class="phone-image" alt="Grid of images of MG Property Service's previous work" src="images/mg-grid.jpg"> 
+
+		<article class="portfolio-item">
+			
+			<div class="project-details">
+				<h3 class="large-project-title">MG Property Services</h3>
+				<h4 class="project-details-title">Website (Individual project)</h4>
+				<p>MG Property Services was built for my final year practical web project. Soon to be released, it will compete with existing property services companies located in the Bicester area. </p>
+				<p>The site's objectives were for it to be fully responsive, visually appealing and user-friendly. It involved finding my own client and working on a real project individually along with a 4000 word written report.</p>
+				<p>The site was built following the waterfall methodology and from conception to completion, involved website development tools and techniques such as competitor analysis , user testing and hi-fidelity wireframes.</p>
+
+				<p>The project was successful and the client was happy with the finished product. It will be released once the remaining content has been filled in and a suitable domain name has been purchased.</p>
+				<p class="grade">Overall grade: TBC</p>
+				<a class="portfolio-button" href="http://www.15093118.webdevmmu.uk/mg-property-services/index.html" title="Student Guide website">Project Website</a>
+			</div>
+
+		</article>
+
+		<article class="portfolio-item">
+
+			<div class="mg-services"></div>
+
+		</article>
+	</section>
+
+	<!--    UXD InstaWatch      -->
+	<div class="rectangle"></div>
+
+	<section class="portfolio-item-container">
+		
+	<img class="phone-image" alt="Two apple mac screens side by side with design work on them" src="images/stock-ux-mobile.jpg"> 
+
+		<article class="portfolio-item">
+
+			<div class="ux-bg-image"></div>
+			
+		</article>
+
+		<article class="portfolio-item">
+
+			<div class="project-details">
+
+				<h3 class="large-project-title">InstaWatch</h3>
+				<h4 class="project-details-title">User Experience Design</h4>
+				<p>InstaWatch is a wholly original TV/Movie streaming application which focuses on the social aspect of watching TV shows/movies at the same time as friends within the application.</p>
+
+				<p>The original idea came out of an ideation session where the group found a problem with modern streaming services. We wanted to create an application where all streaming services could be found in one application, reducing the amount of time it takes users to find their desired show. </p>
+
+				<p>Upon conducting further user research, the group learned that the target audience would instead prefer using InstaWatch as a social streaming platform. This is where the original idea had shifted to instead focus more on the needs of the users.</p>
+
+				<p>Extensive competitor analysis, detailed personas and testing paper wireframes, axure prototypes and eventually a completed prototype (made in Invision) were constructed with constant iterations along the way to produce the best possible product. </p>
+
+				<p class="grade">Overall grade: 75%</p>
+				<a class="portfolio-button" href="https://wqws5v.axshare.com" title="Axure prototype for InstaWatch">Axure Prototype</a> <a class="portfolio-button" href="https://invis.io/SFEXVST7M" title="Invision prototype for InstaWatch">Invision Prototype</a>
+			</div>
+
+		</article>
+
+	</section>
+
+
+	<!-- Freshers Focus -->
+
+	<div class="rectangle"></div>
+
+	<section class="portfolio-item-container">
+	
+	<img class="phone-image" alt="Logo for Freshers Focus with MMU in the background" src="images/ff-mobile.jpg">
+	
+		<article class="portfolio-item">
+		
+			<div class="project-details">
+
+				<h2 class="large-project-title">Freshers Focus</h2>
+
+				<h4 class="project-details-title">Website (Group project)</h4>
+
+				<p>This unit was a challenging student-led project to develop the understanding, skills and experience in running with Digital Management projects. It focused more on the behind the scenes rather than the final deliverable (website) itself.</p>
+				<p>As the joint project manager to this unit, I got an insight into what it is like leading a group and understanding the pressure of reaching organised and precise short term goals before reaching the final end product.
+				</p>
+				<p>With the only support from the lecturers coming from the designated client meetings, this unit relied entirely on the work ethic and contribution of the whole team.</p>
+				<p class="grade">Overall grade: 74%</p>
+
+				<a class="portfolio-button" href="http://14061983.webdevmmu.uk/freshersfocus/index.html" title="Freshers focus website">Project website</a>
+			</div>
+
+		</article>
+
+		<article class="portfolio-item">
+
+			<div class="ff-bg-image"></div>
+
+		</article>
+	</section>
+	
+
+	<div class="rectangle"></div>
+
+	<section class="portfolio-item-container">
+		
+		<img class="phone-image" alt="Richard Brown preparing some street food in a market" src="images/richard-mobile.jpg">
+
+		<article class="portfolio-item">
+
+			<div class="richard-bg-image"></div>
+
+		</article>
+
+		<article class="portfolio-item">
+			<div class="project-details">
+				<h3 class="large-project-title">Street to the Heat</h3>
+				<h4 class="project-details-title">Audio Clip</h4>
+				<p>Street food is an international phenomenon, which over recent years has taken the country by storm. The industry has enabled many people to start their own businesses and find success without the risk of big upfront investments.
+				</p>
+				<p>Me and my group explored the journey of chef Richard Brown and how he begun as a small time street food trader to now recently opening up a brand new restaurant in the luxurious area of Spinningfields, Manchester.
+				</p>
+				<p>This individual webisode of the series examined what risks Richard has faced throughout his career to get to where he is now.</p>
+				<p class="grade">Overall grade: 63%</p>
+
+				<a class="portfolio-button" href="https://soundcloud.com/sam-bindloss/sam-bindloss-audio-clip" title="From the street to the heat audio clip">Project Audio clip</a>
+
+			</div>
+		</article>
+	</section>
+
+
+	<!-- DARIUS BROWNE  -->
+
+	<div class="rectangle"></div>
+
+	<section class="portfolio-item-container">
+		
+	<img class="phone-image" alt="Portrait photo of Darius Browne" src="images/darius-mobile.jpg">
+
+		<article class="portfolio-item">
+
+			<div class="project-details">
+				<h3 class="large-project-title">Darius Browne</h3>
+				<h4 class="project-details-title">Self initiated project</h4>
+				<p>Darius had asked me to make him a quick website at the beginning of my third year. He provided me with a few high-quality images and let me get to work on providing a platform for himself on the web.</p>
+				<p>Darius has recently started to make his own music, so for professional reasons he wanted a website to help advertise his music and soon to be his own original youtube videos.</p>
+				<p>The site is not fully completed and is not live yet, but he is still working on providing me with more content and also videos for his youtube.
+				</p>
+
+				<a class="portfolio-button" href="external-websites/darius-browne/index.html" title="Darius Browne website">Project Website</a>
+			</div>
+
+		</article>
+
+		<article class="portfolio-item">
+
+			<div class="darius-bg-image">
+			</div>
+
+		</article>
+
+	</section>
+
+	<div class="rectangle"></div>
+
+	<!--    WEB PROGRAMMING     -->
+	<section class="prog-section">
+		<h2 id="programming-link">Web Programming</h2>
+		<p>Considering that JavaScript is the most in-demand programming language right now, these applications are a good way to demonstrate my understanding of the language.</p>
+		<p>These applications include different elements such as encryption/decryption, an order form and an example of a pub menu which incorporates AJAX and JSON.</p>
+	</section>
+	<section class="image-container3">
+		<div class="container-content">
+			<div class="content">
+				<div class="prog-spacing">
+					<h3><a class="prog-headings" href="external-websites/web-programming/customerform.html">Order Form</a></h3>
+					<p>The customer order form demonstrates an understanding of calculations through JavaScript and uses different form elements to influence the final price of the completed form.</p>
+					<p>Once the form has been filled out by the user, a message at the bottom of the page would appear with all the final deductions/additions.</p>
+					<p class="grade">Overall grade: 78%</p>
+				</div>
+				<div class="prog-spacing">
+					<h3><a class="prog-headings" href="external-websites/web-programming/encryptor.html">Encryptor</a></h3>
+					<p>This application would take any message from the user and encrypt it into a new combination of letters, dependent on their key.</p>
+					<p>The user then has the option to copy and paste the encrypted message provided and input into a decryptor. When run, the initial user input would be returned.</p>
+					<p class="grade">Overall grade: 85%</p>
+				</div>
+				<div class="prog-spacing">
+					<h3><a class="prog-headings" href="external-websites/web-programming/pub-menu/menu.html">Pub Menu</a></h3>
+					<p>This pub menu demonstrates the use of AJAX and JSON. Features include an externally stored JSON file which is used to change the pub menu depending on which day the user chooses.</p>
+					<p>It also features a picture carousel towards the bottom right of the page which changes photo every 4 seconds to add a bit more life to the site.
 					</p>
-					<p>With the only support from the lecturers coming from the designated client meetings, this unit relied entirely on the work ethic and contribution of the whole team.</p>
-					<p class="grade">Overall grade: 74%</p>
-				</div><a class="portfolio-button" href="http://14061983.webdevmmu.uk/freshersfocus/index.html" title="Freshers focus website">Project website</a>
-			</div>
-		</div>
-
-		<!--    UXD InstaWatch      -->
-		<div class="rectangle"></div>
-
-		<div class="portfolio-item">
-			<div class="portfolio-image-container"><img alt="Example persona for User Experience project" class="ux-mobile-display" height="452" src="images/instawatch-mobile.jpg" width="800"> <img alt="Example of a persona for Sam's User Experience Project" class="ux-desktop-display" height="900" src="images/instawatch-desktop.jpg" width="860"></div>
-			<div class="portfolio-content-container">
-				<div class="project-details">
-					<h3 class="large-project-title">InstaWatch</h3>
-					<h4 class="project-details-title">User Experience Design</h4>
-					<p>InstaWatch is a wholly original TV/Movie streaming application which focuses on the social aspect of watching TV shows/movies at the same time as friends within the application.</p>
-
-					<p>The original idea came out of an ideation session where the group found a problem with modern streaming services. We wanted to create an application where all streaming services could be found in one application, reducing the amount of time it takes users to find their desired show. </p>
-
-					<p>Upon conducting further user research, the group learned that the target audience would instead prefer using InstaWatch as a social streaming platform. This is where the original idea had shifted to instead focus more on the needs of the users.</p>
-
-					<p>Extensive competitor analysis, detailed personas (as seen above) and testing paper wireframes, axure prototypes and eventually a completed prototype (made in Invision) were constructed with constant iterations along the way to produce the best possible product. </p>
-
-					<p class="grade">Overall grade: TBC</p>
-				</div><a class="portfolio-button" href="https://wqws5v.axshare.com" title="Axure prototype for InstaWatch">Axure Prototype</a> <a class="portfolio-button" href="https://invis.io/SFEXVST7M" title="Invision prototype for InstaWatch">Invision Prototype</a>
-			</div>
-		</div>
-
-		<!--    Student Guide   -->
-		<div class="rectangle"></div>
-		<div class="portfolio-item">
-			<div class="portfolio-image-container"><img alt="Front facing view of the business school on a sunny day" class="sg-mobile-display" height="506" src="images/mmu-mobile.jpg" width="850">
-				<img alt="Front facing view of the business school on a sunny day" class="sg-desktop-display" height="882" src="images/mmu-desktop.jpg" width="878"></div>
-			<div class="portfolio-content-container">
-				<div class="project-details">
-					<h3 class="large-project-title">Student Guide</h3>
-					<h4 class="project-details-title">Website (Group Project)</h4>
-					<p>The aim of this project was to build a multi-platform website to reflect what life is like as an Information &amp; Communications student at Manchester Metropolitan University.</p>
-					<p>The site's objectives were to be informative to potential future students within the Information &amp; Communications department as well as providing a professional platform that will help inform its users, show a rounded depiction of life as a student in Manchester and also present a positive view of the students and their associated course.</p>
-					<p>Although looking back on the overall design of the website, it certainly isn't the most visually pleasing but it does offer extremely effortless navigation throughout with plenty of well-written content and useful information within all aspects of the site.</p>
-					<p class="grade">Overall grade: 69%</p>
-				</div><a class="portfolio-button" href="external-websites/web-dev-website/index.html" title="Student Guide website">Project Website</a>
-			</div>
-		</div>
-
-		<!-- From the street to the heat    -->
-		<div class="rectangle"></div>
-		<div class="portfolio-item">
-			<div class="portfolio-image-container"><img alt="Richard Brown cooking some street food" class="ftsth-mobile-display" height="494" src="images/richard-mobile.jpg" width="858"> <img alt="Richard Brown cooking some street food" class="ftsth-desktop-display" height="847" src="images/richard-desktop.jpg" width="903"></div>
-			<div class="portfolio-content-container">
-				<div class="project-details">
-					<h3 class="large-project-title">Street to the Heat</h3>
-					<h4 class="project-details-title">Audio Clip</h4>
-					<p>Street food is an international phenomenon, which over recent years has taken the country by storm. The industry has enabled many people to start their own businesses and find success without the risk of big upfront investments.
-					</p>
-					<p>Me and my group explored the journey of chef Richard Brown and how he begun as a small time street food trader to now recently opening up a brand new restaurant in the luxurious area of Spinningfields, Manchester.
-					</p>
-					<p>This individual webisode of the series examined what risks Richard has faced throughout his career to get to where he is now.</p>
-					<p class="grade">Overall grade: 63%</p>
-				</div><a class="portfolio-button" href="https://soundcloud.com/sam-bindloss/sam-bindloss-audio-clip" title="From the street to the heat audio clip">Project Audio clip</a>
-			</div>
-		</div>
-
-		<!-- DARIUS BROWNE  -->
-		<div class="rectangle"></div>
-		<div class="portfolio-item">
-			<div class="portfolio-image-container"><img alt="Portrait of Darius Browne" class="mobile-display" height="675" src="images/darius-mobile.jpg" width="850"> <img alt="Portrait of Darius Browne" class="desktop-display" height="1140" src="images/darius-desktop.jpg" width="850"></div>
-			<div class="portfolio-content-container">
-				<div class="project-details">
-					<h3 class="large-project-title">Darius Browne</h3>
-					<h4 class="project-details-title">Self initiated project</h4>
-					<p>Darius had asked me to make him a quick website at the beginning of my third year. He provided me with a few high-quality images and let me get to work on providing a platform for himself on the web.</p>
-					<p>Darius has recently started to make his own music, so for professional reasons he wanted a website to help advertise his music and soon to be his own original youtube videos.</p>
-					<p>The site is not fully completed and is not live yet, but he is still working on providing me with more content and also videos for his youtube.
-					</p>
-				</div><a class="portfolio-button" href="external-websites/darius-browne/index.html" title="Darius Browne website">Project Website</a>
-			</div>
-		</div>
-
-		<!--    WEB PROGRAMMING     -->
-		<section class="prog-section">
-			<h2 id="programming-link">Web Programming</h2>
-			<p>Considering that JavaScript is the most in-demand programming language right now, these applications are a good way to demonstrate my understanding of the language.</p>
-			<p>These applications include different elements such as encryption/decryption, an order form and an example of a pub menu which incorporates AJAX and JSON.</p>
-		</section>
-		<section class="image-container3">
-			<div class="container-content">
-				<div class="content">
-					<div class="prog-spacing">
-						<h3><a class="prog-headings" href="external-websites/web-programming/customerform.html">Order Form</a></h3>
-						<p>The customer order form demonstrates an understanding of calculations through JavaScript and uses different form elements to influence the final price of the completed form.</p>
-						<p>Once the form has been filled out by the user, a message at the bottom of the page would appear with all the final deductions/additions.</p>
-						<p class="grade">Overall grade: 78%</p>
-					</div>
-					<div class="prog-spacing">
-						<h3><a class="prog-headings" href="external-websites/web-programming/encryptor.html">Encryptor</a></h3>
-						<p>This application would take any message from the user and encrypt it into a new combination of letters, dependent on their key.</p>
-						<p>The user then has the option to copy and paste the encrypted message provided and input into a decryptor. When run, the initial user input would be returned.</p>
-						<p class="grade">Overall grade: 85%</p>
-					</div>
-					<div class="prog-spacing">
-						<h3><a class="prog-headings" href="external-websites/web-programming/pub-menu/menu.html">Pub Menu</a></h3>
-						<p>This pub menu demonstrates the use of AJAX and JSON. Features include an externally stored JSON file which is used to change the pub menu depending on which day the user chooses.</p>
-						<p>It also features a picture carousel towards the bottom right of the page which changes photo every 4 seconds to add a bit more life to the site.
-						</p>
-						<p>Time constraints meant that the search filter was not able to be completed in time.</p>
-						<p class="grade">Overall grade: 67%</p>
-					</div>
+					<p>Time constraints meant that the search filter was not able to be completed in time.</p>
+					<p class="grade">Overall grade: 67%</p>
 				</div>
 			</div>
-		</section>
-	</article>
-	<footer>
-		<div class="back">
-			<a href="#top"><img alt=
-			"Navigational button which directs the user to top of the page"
-			height="40" src="images/back-to-top.png" width="75"></a>
 		</div>
+	</section>
 
+	<footer>
+	
 		<div class="footer-container">
 
 			<div class="col-2">
@@ -212,13 +296,13 @@
 
 			<div class="col-1">
 				<h4>Social Media:</h4>
-
-				<a href="https://github.com/bindloss"><img src="images/git-logo.png" class="social-media-images" alt="Logo for Github" height="48" width="48"></a>
-				<a href="https://twitter.com/SamBindloss">
-				<img src="images/twitter-logo.png" class="social-media-images" alt="Logo for Twitter" height="48" width="48"></a>
-				<a href="https://www.linkedin.com/in/sam-bindloss-62516a103/">
-				<img src="images/linked-in.png" class="social-media-images" alt="Logo for Linked In" height="48" width="48"></a>
-
+				
+				<p><a href="https://github.com/bindloss"><i class="fab fa-github-square"></i></a></p>
+				
+				<p><a href ="https://twitter.com/SamBindloss"><i class="fab fa-twitter-square"></i></a></p>
+				
+				<p><a href="https://www.linkedin.com/in/sam-bindloss-62516a103/"><i class="fab fa-linkedin"></i></a></p>
+				
 			</div>
 
 			<div class="col-1">
@@ -227,6 +311,10 @@
 			</div>
 		</div>
 	</footer>
+	
+		<script src="script.js" type="text/javascript">
+	</script>
+	
 </body>
 
 </html>

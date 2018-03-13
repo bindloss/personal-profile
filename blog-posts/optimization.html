@@ -1,159 +1,163 @@
 <!DOCTYPE html>
 <html lang="en-gb">
-    <head>      
-		<meta charset="utf-8">
-		<meta name="description" content="Blog post about different methods and techniques to increase performance and SEO when developing a website">
-		<meta name="keywords" content="Digital industry, Blog post, Sam Bindloss, Talent shortage, Manchester digital skills audit, tech nation">
-		<meta name="author" content="Sam Bindloss">
-		<meta name="viewport" content="width-device-width, initial-scale=1.0"> 
-		
-		<!--[if lt IE 9]> 
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Blog post about different methods and techniques to increase performance and SEO when developing a website">
+	<meta name="keywords" content="Digital industry, Blog post, Sam Bindloss, Talent shortage, Manchester digital skills audit, tech nation">
+	<meta name="author" content="Sam Bindloss">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!--[if lt IE 9]> 
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
-        <![endif]--> 
+        <![endif]-->
 
- <link rel="icon" 
-     type="image/ico" 
-     href="images-pp/favicon1.ico">
- 
-<title>Sam Bindloss - Performance and Optimization Blog Post</title>
-    
-<!-- Google analytics 	-->
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-102699117-1"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-
-gtag('config', 'UA-102699117-1');
-</script>
-
-    <link rel="stylesheet" href="/style.css">
+	<!-- Font awesome and Favicon -->
+	<link href="images/favicon1.ico" rel="icon" type="image/ico">
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 	
-<!-- 	Google Fonts 	 -->
+	<title>Performance and optimisation - Blog Post</title>
 
-<link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Coustard" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+	<!-- Google analytics 	-->
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-102699117-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-102699117-1');
+
+	</script>
+
+	<link rel="stylesheet" href="/style.css">
+
+	<!-- 	Google Fonts 	 -->
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
 
 </head>
 
 <body id="top">
-<header>
+	<header>
 
-<div class="nav-container">
-<nav>
-	<ul>
-		<li><a href="/index.html">Home</a></li>
-		<li><a href="/portfolio.html">Portfolio</a></li>
-		<li><a href="/blog.html">Blog</a></li>
-		<li><a href="/contact.html">Contact</a></li>
-	</ul>
-</nav>
-</div>
-</header>
-
-<section class="blog-banner">
-	
-	<h1 class="main-blog-heading">Performance and Optimization</h1>
-	<p>Blog post</p>
-	
-</section>
-
-<section class="blog-post-container">
-
-	<h2 class="large-blog-heading">"Why have I run out of 4g?"</h2>
-
-	<p>The words above are not something you want any of your users to say. In this blog post, I discuss how to increase the performance of web pages through the use of optimization and will delve into some of the techniques used.</p>
-
-	<p>In the book, <a href="https://www.amazon.com/Web-Style-Guide-4th-Foundations/dp/0300211651" title="Web Style guide book on amazon">Web Style Guide</a> by Patrick J. Lynch &amp; Sarah Horton, important data from Walmart found that <em>"conversion rate plunges if a page takes more than four seconds to load."</em> So, in that case, maybe that beautiful high-resolution image isn't such a good idea after all. </p>
-
-	<h3 class="blog-headings">Code</h3>
-
-	<p>Margin-bottom, margin-top, margin-left, margin-rig... No, no, no. Due to most of the planet now being glued to mobile devices, us developers need to start paying more attention to our code and use more shorthand alternatives.</p>
-
-	<p>An example of some of the shorthand coding I would use is to re-use CSS classes where applicable. Rewriting a whole new class that practically does the same thing as the last isn't always the best isn't doing you many favours and also could be wasting your time. It's useful to join classes together through the use of a comma. See an example below (figure 1).</p>
-
-	<figure>
-		<img src="images/code-optimization.jpg" alt="Examples of the use of shorthand coding by joining classes together" width="1193" height="280"> 
-
-		<figcaption class="image-caption">
-		<em>Figure 1</em>
-		<br>
-		Examples of the use of shorthand coding by joining classes together
-		</figcaption>
-	</figure>
-
-	<p>It goes without saying, but before I launch any of my projects I make sure I validate my code with these free to use services.</p>
-
-	<ul class="blog-list">
-	<li><a href="https://validator.w3.org/">HTML Validation</a></li>
-	<li><a href="http://csslint.net/">CSS Validation</a></li>
-	<li><a href="http://www.jslint.com/">JavaScript Validation</a></li>
-	</ul>
-
-	<h3 class="blog-headings">Optimization</h3>
-
-	<p>Keep file sizes low! There is always an opportunity to lower sizes of any kind of element within a webpage, whether it is an image, video or code. </p>
-
-	<p>A habit I have gotten myself into consistently is optimizing images for the web. Whenever I input an image onto the web, I have to first make sure the file size has been decreased as much as possible, while still keeping within the balance of looking professional, clear and not losing too much quality. </p>
-
-	<p>I used the free photo editing software <a href="https://www.gimp.org/">GIMP</a> for editing and compressing most of my images. It is free, however, a bit more clunky and harder to use than photoshop. But it gets the job done and can easily be used for compressing images for the web. See (figure 2) below for instructions on how to optimize images with GIMP.</p>
-
-	<figure>
-		<img src="images/gimp-optimization.jpg" alt="Visual demonstration of compressing image with GIMP" width="732" height="282"> 
-
-		<figcaption class="image-caption">
-		<em>Figure 2</em>
-		<br>
-		How to optimize with GIMP: Click "File" and then "Export As". Then click "Show preview in image window" and then begin reducing image until right balance of quality/compression is found
-		</figcaption>
-	</figure>
-
-	<h3 class="blog-headings">SEO Integration</h3>
-
-	<p>Whats the point in having a website if nobody can find it? SEO (Search Engine Optimization) is used to draw users to my site (preferably employers). Things such as incorporating my own social media onto each page of my site will benefit the site in higher rankings when being searched for on search engines.</p>
-
-	<p>Luckily for me though, I think I am the only Sam Bindloss in this world, but that's not the point!</p>
-
-	<p>Other SEO integration tips and tricks are displayed below:</p>
-
-	<ul class="blog-list">
-	<li>Metadata</li>
-	<li>Linguistic SEO (Speak the user's language)</li>
-	<li>Architectural SEO (Use of links, alt-text etc.)</li>
-	<li>Reputation SEO (Sites that are widely considered to be good)</li>
-	</ul>
-
-</section>
-
-	<footer>
-		<div class="back">
-			<a href="#top"><img alt=
-			"Navigational button which directs the user to top of the page"
-			height="40" src="/images/back-to-top.png" width="75"></a>
+		<div class="nav-container">
+			<nav>
+				<ul>
+					<li><a href="/index.html">Home</a></li>
+					<li><a href="/portfolio.html">Portfolio</a></li>
+					<li><a href="/blog.html">Blog</a></li>
+					<li><a href="/contact.html">Contact</a></li>
+				</ul>
+			</nav>
 		</div>
+	</header>
 
+	<button title="Back to top" id="myBtn" class="scroll" role="button">
+        <span class="arrow-up">
+        	<img src="/images/chevron-up.png" alt="Up arrow" width="32" height="32">
+        </span>
+    </button>
+
+	<section class="blog-banner">
+
+		<h1 class="main-blog-heading">Performance and Optimisation</h1>
+		<p>Blog post</p>
+
+	</section>
+
+	<section class="blog-post-container">
+
+		<h2 class="large-blog-heading">"Why have I run out of 4g?"</h2>
+
+		<p>The words above are not something you want any of your users to say. In this blog post, I discuss how to increase the performance of web pages through the use of optimisation and will delve into some of the techniques used.</p>
+
+		<p>In the book, <a href="https://www.amazon.com/Web-Style-Guide-4th-Foundations/dp/0300211651" title="Web Style guide book on amazon">Web Style Guide</a> by Patrick J. Lynch &amp; Sarah Horton, important data from Walmart found that <em>"conversion rate plunges if a page takes more than four seconds to load."</em> So, in that case, maybe that beautiful high-resolution image isn't such a good idea after all. </p>
+
+		<h3 class="blog-headings">Code</h3>
+
+		<p>Margin-bottom, margin-top, margin-left, margin-rig... No, no, no. Due to most of the planet now being glued to mobile devices, us developers need to start paying more attention to our code and use more shorthand alternatives.</p>
+
+		<p>An example of some of the shorthand coding I would use is to re-use CSS classes where applicable. Rewriting a whole new class that practically does the same thing as the last isn't always the best isn't doing you many favours and also could be wasting your time. It's useful to join classes together through the use of a comma. See an example below (figure 1).</p>
+
+		<figure>
+			<img src="images/code-optimization.jpg" alt="Examples of the use of shorthand coding by joining classes together" width="1193" height="280">
+
+			<figcaption class="image-caption">
+				<em>Figure 1</em>
+				<br> Examples of the use of shorthand coding by joining classes together
+			</figcaption>
+		</figure>
+
+		<p>It goes without saying, but before I launch any of my projects I make sure I validate my code with these free to use services.</p>
+
+		<ul class="blog-list">
+			<li><a href="https://validator.w3.org/">HTML Validation</a></li>
+			<li><a href="http://csslint.net/">CSS Validation</a></li>
+			<li><a href="http://www.jslint.com/">JavaScript Validation</a></li>
+		</ul>
+
+		<h3 class="blog-headings">Optimisation</h3>
+
+		<p>Keep file sizes low! There is always an opportunity to lower sizes of any kind of element within a webpage, whether it is an image, video or code. </p>
+
+		<p>A habit I have gotten myself into consistently is optimising images for the web. Whenever I input an image onto the web, I have to first make sure the file size has been decreased as much as possible, while still keeping within the balance of looking professional, clear and not losing too much quality. </p>
+
+		<p>I used the free photo editing software <a href="https://www.gimp.org/">GIMP</a> for editing and compressing most of my images. It is free, however, a bit more clunky and harder to use than photoshop. But it gets the job done and can easily be used for compressing images for the web. See (figure 2) below for instructions on how to optimise images with GIMP.</p>
+
+		<figure>
+			<img src="images/gimp-optimization.jpg" alt="Visual demonstration of compressing image with GIMP" width="732" height="282">
+
+			<figcaption class="image-caption">
+				<em>Figure 2</em>
+				<br> How to optimise with GIMP: Click "File" and then "Export As". Then click "Show preview in image window" and then begin reducing image until right balance of quality/compression is found
+			</figcaption>
+		</figure>
+
+		<h3 class="blog-headings">SEO Integration</h3>
+
+		<p>Whats the point in having a website if nobody can find it? SEO (Search Engine Optimisation) is used to draw users to my site (preferably employers). Things such as incorporating my own social media onto each page of my site will benefit the site in higher rankings when being searched for on search engines.</p>
+
+		<p>Luckily for me though, I think I am the only Sam Bindloss in this world, but that's not the point!</p>
+
+		<p>Other SEO integration tips and tricks are displayed below:</p>
+
+		<ul class="blog-list">
+			<li>Metadata</li>
+			<li>Linguistic SEO (Speak the user's language)</li>
+			<li>Architectural SEO (Use of links, alt-text etc.)</li>
+			<li>Reputation SEO (Sites that are widely considered to be good)</li>
+		</ul>
+
+	</section>
+
+		<footer>
+	
 		<div class="footer-container">
 
 			<div class="col-2">
 				<h4>Available for hire</h4>
 
-				<p>If you're interested in my services, please don't hesitate to drop me an <a href="/contact.html">E-mail</a> or follow me on my active social media accounts.</p>
+				<p>If you're interested in my services, please don't hesitate to drop me an <a href="contact.html">E-mail</a> or follow me on my active social media accounts.</p>
 			</div>
 
 			<div class="col-1">
 				<h4>Social Media:</h4>
-
-				<a href="https://github.com/bindloss"><img src="/images/git-logo.png" class="social-media-images" alt="Logo for Github" height="48" width="48"></a>
-				<a href="https://twitter.com/SamBindloss">
-				<img src="/images/twitter-logo.png" class="social-media-images" alt="Logo for Twitter" height="48" width="48"></a>
-				<a href="https://www.linkedin.com/in/sam-bindloss-62516a103/">
-				<img src="/images/linked-in.png" class="social-media-images" alt="Logo for Linked In" height="48" width="48"></a>
-
+				
+				<p><a href="https://github.com/bindloss"><i class="fab fa-github-square"></i></a></p>
+				
+				<p><a href ="https://twitter.com/SamBindloss"><i class="fab fa-twitter-square"></i></a></p>
+				
+				<p><a href="https://www.linkedin.com/in/sam-bindloss-62516a103/"><i class="fab fa-linkedin"></i></a></p>
+				
 			</div>
 
 			<div class="col-1">
@@ -162,7 +166,8 @@ gtag('config', 'UA-102699117-1');
 			</div>
 		</div>
 	</footer>
-    
-  <script src="script.js"></script>
+	
+	<script src="/script.js"></script>
 </body>
+
 </html>

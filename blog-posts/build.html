@@ -1,160 +1,158 @@
 <!DOCTYPE html>
 <html lang="en-gb">
-    <head>
-        <meta charset="utf-8">
-		<meta name="Sam Bindloss - Personal Profile"
-        content="Blog Post on the actions and techniques taken to build my own personal website including making a professional banner image and the web development process ">
-		<meta name="keywords" content="Personal profile, Sam Bindloss, Build, Design, Research, Professional, Blog post">
-		<meta name="author" content="Sam Bindloss">
-		<meta name="viewport" content="width-device-width, initial-scale=1.0"> 
 
- <link rel="icon" 
-     type="image/ico" 
-     href="images-pp/favicon1.ico">
+<head>
+	<meta charset="utf-8">
+	<meta name="Sam Bindloss - Personal Profile" content="Blog Post on the actions and techniques taken to build my own personal website including making a professional banner image and the web development process ">
+	<meta name="keywords" content="Personal profile, Sam Bindloss, Build, Design, Research, Professional, Blog post">
+	<meta name="author" content="Sam Bindloss">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sam Bindloss - Building My Personal Website Blog Post</title>
-        
-<!-- Google analytics 	-->
+	<!-- Font awesome and Favicon -->
+	<link href="images/favicon1.ico" rel="icon" type="image/ico">
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-102699117-1"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
+	<title>Build - Blog Post - Sam Bindloss</title>
 
-gtag('config', 'UA-102699117-1');
-</script>       
+	<link href="/style.css" rel="stylesheet">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <!--[if lt IE 9]> 
+	<!-- Google analytics 	-->
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-102699117-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-102699117-1');
+
+	</script>
+
+	<!--[if lt IE 9]> 
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
-        <![endif]--> 
-        
-    <link rel="stylesheet" href="/style.css">
-	
-<!-- 	Google Fonts 	 -->
+        <![endif]-->
 
-<link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Coustard" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+	<!-- 	Google Fonts 	 -->
 
-    </head>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+
+</head>
 
 <body id="top">
 
+	<header>
 
-<header>
+		<div class="nav-container">
 
-<div class="nav-container">
+			<nav>
+				<ul>
+					<li><a href="/index.html">Home</a></li>
+					<li><a href="/portfolio.html">Portfolio</a></li>
+					<li><a href="/blog.html">Blog</a></li>
+					<li><a href="/contact.html">Contact</a></li>
+				</ul>
+			</nav>
 
+		</div>
 
-<nav>
-	<ul>
-		<li><a href="/index.html">Home</a></li>
-		<li><a href="/portfolio.html" >Portfolio</a></li>
-		<li><a href="/blog.html">Blog</a></li>
-		<li><a href="/contact.html">Contact</a></li>
-	</ul>
-</nav>
+	</header>
 
-</div>
+	<button title="Back to top" id="myBtn" class="scroll" role="button">
+        <span class="arrow-up">
+        	<img src="/images/chevron-up.png" alt="Up arrow" width="32" height="32">
+        </span>
+    </button>
 
-</header>
+	<section class="blog-banner">
 
-<section class="blog-banner">
-	
-<h1 class="main-blog-heading">Building this site</h1>
-<p>Blog post</p>
-	
-</section>
+		<h1 class="main-blog-heading">Building this site</h1>
+		<p>Blog post</p>
 
-<section class="blog-post-container">
+	</section>
 
-	<h2 class="large-blog-heading">Right, where do I start?</h2>
+	<section class="blog-post-container">
 
-	<p>I knew from the start that I needed to create a website that stands out to potential employers. I read <a href="http://blog.building-blocks.com/insights/the-importance-of-a-homepage-first-impressions" title="Article on importance of first impressions">Kyle Cassidy's blog post </a>on the importance of homepage design and he spoke about the "Halo effect". <em>"The halo effect is a psychological phenomenon where a potential employer is more likely to be impressed by the candidate based solely on the initial impression."</em> For this reason, I wanted to create the best first impression possible and show off my skills. So... </p>
+		<h2 class="large-blog-heading">Right, where do I start?</h2>
 
-	<h3 class="blog-headings">Chanelling the Halo effect</h3>
+		<p>I knew from the start that I needed to create a website that stands out to potential employers. I read <a href="http://blog.building-blocks.com/insights/the-importance-of-a-homepage-first-impressions" title="Article on importance of first impressions">Kyle Cassidy's blog post </a>on the importance of homepage design and he spoke about the "Halo effect". <em>"The halo effect is a psychological phenomenon where a potential employer is more likely to be impressed by the candidate based solely on the initial impression."</em> For this reason, I wanted to create the best first impression possible and show off my skills. So... </p>
 
-	<p>Welcome to the joy of the powers of CSS3 and the use of the "background-image: (url)" property. I had an idea in my head of a photo I wanted to take for the homepage, so I used a Canon 550d, DSLR with nice lighting and then got to work with photoshop. Firstly, changing the levels of the photo and cropping down to a suitable size. Then applied a sketch filter and there you have it (see figure 1).</p>
+		<h3 class="blog-headings">Chanelling the Halo effect</h3>
 
-	<figure>
-		<img src="images/build-banner-example.jpg" alt="Example of the process of making my banner image" width="1430" height="688"> 
+		<p>Welcome to the joy of the powers of CSS3 and the use of the "background-image: (url)" property. I had an idea in my head of a photo I wanted to take for the homepage, so I used a Canon 550d, DSLR with nice lighting and then got to work with photoshop. Firstly, changing the levels of the photo and cropping down to a suitable size. Then applied a sketch filter and there you have it (see figure 1).</p>
 
-		<figcaption class="image-caption">
-		<em>Figure 1</em>
-		<br>
-		Example of the process of making my banner image
-		</figcaption>
-	</figure>
+		<figure>
+			<img src="images/build-banner-example.jpg" alt="Example of the process of making my banner image" width="1430" height="688">
 
-	<p>So, great news, I was happy with how the edit had turned out, but even still I felt like there was work to be done. This is where I applied the background-blend technique to my CSS. I applied the "multiply" effect before finally coming to a final decision on which colour was most suitable (dark blue).</p>
+			<figcaption class="image-caption">
+				<em>Figure 1</em>
+				<br> Example of the process of making my banner image
+			</figcaption>
+		</figure>
 
-	<p>From this moment onwards, I had an idea about the colour palette for my whole site, and then kept these colours consistent throughout my site in order to generate a recognisable, clean house style from start to finish.</p>
+		<p>So, great news, I was happy with how the edit had turned out, but even still I felt like there was work to be done. This is where I applied the background-blend technique to my CSS. I applied the "multiply" effect before finally coming to a final decision on which colour was most suitable (dark blue).</p>
 
-	<p>I knew this was important after reading <a href="https://www.huffingtonpost.com/janet-odgis/keeping-color-consistent-_b_8749334.html" title="Article from Huffington post about keeping colour consistent">Janet Odgis's post</a> on the well established website Huffington Post on keeping colour consistent as she says <em>"Colour is a way to differentiate yourself in a crowded marketplace".</em> </p>
+		<p>From this moment onwards, I had an idea about the colour palette for my whole site, and then kept these colours consistent throughout my site in order to generate a recognisable, clean house style from start to finish.</p>
 
-	<p>After all, the amount of competition for jobs these days is challenging enough as it is. Therefore, standing out from the crowd and using bright, vibrant colours and a recognisable colour palette will enable users to easily identify my site compared to others.</p>
+		<p>I knew this was important after reading <a href="https://www.huffingtonpost.com/janet-odgis/keeping-color-consistent-_b_8749334.html" title="Article from Huffington post about keeping colour consistent">Janet Odgis's post</a> on the well established website Huffington Post on keeping colour consistent as she says <em>"Colour is a way to differentiate yourself in a crowded marketplace".</em> </p>
 
-	<h3 class="blog-headings">Research</h3>
+		<p>After all, the amount of competition for jobs these days is challenging enough as it is. Therefore, standing out from the crowd and using bright, vibrant colours and a recognisable colour palette will enable users to easily identify my site compared to others.</p>
 
-	<p>Considering this was my own personal site, the research phase was much less challenging than other projects I have worked on. I had the freedom to go in any direction I wanted in terms of design and build.</p>
+		<h3 class="blog-headings">Research</h3>
 
-	<p>In order to get my brain working, I searched for some inspiration and found a few brilliant sites which I found really suited me and my style. I compiled my findings into a mood board (See figure 2 below). You'll notice that a few design features of these sites have had an impact on my own design.</p>
+		<p>Considering this was my own personal site, the research phase was much less challenging than other projects I have worked on. I had the freedom to go in any direction I wanted in terms of design and build.</p>
 
-	<figure>
-		<img src="images/moodboard.jpg" alt="The moodboard Sam generated which includes images of inspiration from other sites" width="1158" height="630"> 
+		<p>In order to get my brain working, I searched for some inspiration and found a few brilliant sites which I found really suited me and my style. I compiled my findings into a mood board (See figure 2 below). You'll notice that a few design features of these sites have had an impact on my own design.</p>
 
-		<figcaption class="image-caption">
-		<em>Figure 2</em>
-		<br>
-		The moodboard I generated to help influence the design of my site
-		</figcaption>
-	</figure>
+		<figure>
+			<img src="images/moodboard.jpg" alt="The moodboard Sam generated which includes images of inspiration from other sites" width="1158" height="630">
 
-	<h3 class="blog-headings">Design</h3>
+			<figcaption class="image-caption">
+				<em>Figure 2</em>
+				<br> The moodboard I generated to help influence the design of my site
+			</figcaption>
+		</figure>
 
-	<p>After I had completed researching, I moved to designing my site before even touching my laptop. I did this by sketching out multiple wireframes for mobile, tablet and desktop. Simply providing a basis for ideas and different designs can help greatly when laying out the HTML structure of the site. </p>
+		<h3 class="blog-headings">Design</h3>
 
-	<p>I referred back to the colour palette I picked up on in my mood board (figure 2) but after trying out the colours, I realised they needed slightly tweaking for accessibility reasons. I was able to check whether certain colours were hard to see thanks to the use of a google chrome extension, Accessibility Developer Tools which would provide a rating on whether certain colours of text were too hard to read. </p>
-	
-	<h3 class="blog-headings">Build</h3>
-	
-	<p>When I started to get coding, I firstly provided a solid HTML5 structure before getting to work on the CSS or scripting. When all of my pages had a semantic structure in place I started to move on to the CSS. </p>
+		<p>After I had completed researching, I moved to designing my site before even touching my laptop. I did this by sketching out multiple wireframes for mobile, tablet and desktop. Simply providing a basis for ideas and different designs can help greatly when laying out the HTML structure of the site. </p>
 
-	<p>The biggest challenges I face when coming to the build of any site is the positioning of elements, and flex-box can be such a pain sometimes! Thankfully, after a hard-fought battle with media queries and responsiveness, I got there in the end. </p>
+		<p>I referred back to the colour palette I picked up on in my mood board (figure 2) but after trying out the colours, I realised they needed slightly tweaking for accessibility reasons. I was able to check whether certain colours were hard to see thanks to the use of a google chrome extension, Accessibility Developer Tools which would provide a rating on whether certain colours of text were too hard to read. </p>
 
-	<p>It wasn't over until I ran the site through an HTML validator and made sure my code was clean and concise while making sure shorthand CSS was used where possible in order to increase web-page performance.</p>
+		<h3 class="blog-headings">Build</h3>
 
-</section>
+		<p>When I started to get coding, I firstly provided a solid HTML5 structure before getting to work on the CSS or scripting. When all of my pages had a semantic structure in place I started to move on to the CSS. </p>
+
+		<p>The biggest challenges I face when coming to the build of any site is the positioning of elements, and flex-box can be such a pain sometimes! Thankfully, after a hard-fought battle with media queries and responsiveness, I got there in the end. </p>
+
+		<p>It wasn't over until I ran the site through an HTML validator and made sure my code was clean and concise while making sure shorthand CSS was used where possible in order to increase web-page performance.</p>
+
+	</section>
 
 	<footer>
-		<div class="back">
-			<a href="#top"><img alt=
-			"Navigational button which directs the user to top of the page"
-			height="40" src="/images/back-to-top.png" width="75"></a>
-		</div>
 
 		<div class="footer-container">
 
 			<div class="col-2">
 				<h4>Available for hire</h4>
 
-				<p>If you're interested in my services, please don't hesitate to drop me an <a href="/contact.html">E-mail</a> or follow me on my active social media accounts.</p>
+				<p>If you're interested in my services, please don't hesitate to drop me an <a href="contact.html">E-mail</a> or follow me on my active social media accounts.</p>
 			</div>
 
 			<div class="col-1">
 				<h4>Social Media:</h4>
 
-				<a href="https://github.com/bindloss"><img src="/images/git-logo.png" class="social-media-images" alt="Logo for Github" height="48" width="48"></a>
-				<a href="https://twitter.com/SamBindloss">
-				<img src="/images/twitter-logo.png" class="social-media-images" alt="Logo for Twitter" height="48" width="48"></a>
-				<a href="https://www.linkedin.com/in/sam-bindloss-62516a103/">
-				<img src="/images/linked-in.png" class="social-media-images" alt="Logo for Linked In" height="48" width="48"></a>
+				<p><a href="https://github.com/bindloss"><i class="fab fa-github-square"></i></a></p>
+
+				<p><a href="https://twitter.com/SamBindloss"><i class="fab fa-twitter-square"></i></a></p>
+
+				<p><a href="https://www.linkedin.com/in/sam-bindloss-62516a103/"><i class="fab fa-linkedin"></i></a></p>
 
 			</div>
 
@@ -164,8 +162,9 @@ gtag('config', 'UA-102699117-1');
 			</div>
 		</div>
 	</footer>
- 
-  <script src="script.js"></script>
-    
+
+	<script src="/script.js"></script>
+
 </body>
+
 </html>

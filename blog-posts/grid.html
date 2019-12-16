@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Blog post from Sam Bindloss on how he developed his knowledge with CSS Grid and applied it to his own work.">
+	<meta name="keywords" content="Front-end development, Blog post, Sam Bindloss, CSS Grid, Browser support for CSS Grid, New web technologies, Front end development">
+	<meta name="author" content="Sam Bindloss">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!--[if lt IE 9]> 
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+	<![endif]-->
+
+	<!-- Google analytics 	-->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-102699117-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-102699117-1');
+
+	</script>
+
+	<!-- Font awesome and Favicon -->
+	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+	<title>CSS Grid Blog Post - Sam Bindloss</title>
+
+	<link rel="stylesheet" href="../style.css">
+
+	<!-- 	Google Fonts 	 -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+
+</head>
+
+<body id="top">
+
+	<header>
+		<div class="nav-container">
+			<nav>
+				<ul>
+					<li>
+						<a href="../index.html" class="nav-link">Home</a>
+					</li>
+					<li>
+						<a href="../index.html#portfolio" class="nav-link">Work</a>
+					</li>
+					<!-- Logo here -->
+					<a href="../index.html" class="nav-logo"><img class="nav-logo" src="../images/SB-logo.png" alt="Logo for Sam Bindloss"></a>	
+					<li>
+						<a href="../index.html#blog" class="nav-link">Blog</a>
+					</li>
+					<li>
+						<a href="#contact" class="nav-link">Contact</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<button title="Back to top" id="myBtn" class="scroll" role="button">
+        <span class="arrow-up">
+        	<img src="../images/chevron-up.png" alt="Up arrow" width="32" height="32">
+        </span>
+    </button>
+
+	<section class="blog-post-container">
+	
+		<h1 class="main-blog-heading">CSS Grid<b class="large-dot">◿</b></h1>
+		<h2 class="secondary-blog-heading">Blog post</h2>
+		
+		<h3 class="date">Please note: this blog post was written in 2017 so some information may be outdated.</h3>
+	
+		<h3 class="blog-headings">Aim</h3>
+		<p>To gain a deeper understanding of CSS Grid and to understand when it should be used.</p>
+		
+		<h3 class="blog-headings">Objectives</h3>
+		
+		<ul class="blog-list">
+			<li>Work out whether to use flexbox or grid. Or both?</li>
+			<li>To develop working prototypes of CSS Grid.</li>
+			<li>To apply CSS grid to aspects of my personal site.</li>
+		</ul>
+		
+		<p>Css celebrated its 20th birthday in 2017 and it's amazing to see how far it has come since then. Luckily for me, I wasn't working on websites when "developers used to have to fake the appearance of layouts" (Andrew, 2017). These developers used to have to master floats, tables, and columns to somehow force their designs together.</p>
+		
+		<p>After years of improvements to CSS, it has become easier than ever to design our HTML structured pages through flexbox and, most recently, CSS Grid. "Flexbox and Grid are the perfect CSS layout solutions  —  the modern standards. If you must write CSS at a reasonable level, then investing in a Flexbox and Grid education is priceless" <a href="https://medium.com/flexbox-and-grids/css-flexbox-grid-layout-how-to-approach-css-layouts-in-2017-and-beyond-685deef03e6c">(Emmanuel, 2017:online)</a>.</p>
+		
+		<h3 class="blog-headings">So, what is CSS Grid?</h3>
+		
+		<p>CSS Grid can describe the layout of an entire page in CSS for the first time ever by using a grid system. It's now time to take advantage of this pivotal moment in the evolution of CSS layout.</p>
+		
+		<h3 class="blog-headings">What about flexbox? Isn't that good enough?</h3>
+		
+		<p>Yes, flexbox does a great job and will still be used just as often. However, flexbox offers a one-dimensional layout, whereas grid offers two. Crazy, right?</p>
+		
+		<p>I was able to attend a <a href="https://twitter.com/Mcr_FRED">McrFRED</a> meetup in January 2018 where <a href="https://twitter.com/ThisIsJoFrank">Jo Franchetti</a> (Figure 1) had done a talk on CSS grid. One of the main things I remember Jo saying was that "we should not forget about the other technologies, as flexbox, for example, is still the best way to center-align anything" <a href="https://twitter.com/ThisIsJoFrank">(Franchetti, 2012:presentation)</a>.</p>
+		
+		<figure>
+			<img src="images/grid-talk.jpg" alt="Jo Franchetti giving a talk on CSS grid">
+			
+			<figcaption class="image-caption">
+				Figure 1
+				<br>
+				Jo Franchetti giving a talk on CSS grid
+			</figcaption>
+		</figure>
+		
+		<p>Just because a new web technology is starting to become widely used doesn't mean your favourite technology is going away anytime soon, so don't worry avid flexbox users. Flexbox isn't going anywhere...</p>
+		
+		<p data-height="291" data-theme-id="dark" data-slug-hash="dmWbOM" data-default-tab="result" data-user="bindloss" data-embed-version="2" data-pen-title="Flexbox example" class="codepen">See the Pen <a href="https://codepen.io/bindloss/pen/dmWbOM/">Flexbox example</a> by Sam Bindloss (<a href="https://codepen.io/bindloss">@bindloss</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+		<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+		<h3 class="blog-headings">My first attempt with CSS Grid</h3>
+		
+		<p>After I read through Rachel Andrew's book <a href="https://www.amazon.com/New-CSS-Layout-Rachel-Andrew/dp/1937557685"> (The new CSS layout)</a> I was surprised as to how easy it was to quickly pick up and implement grid to create quick, basic layouts. The codepen below shows an example of what I could quickly put together thanks to using grid.</p>
+		
+		<p data-height="400" data-theme-id="dark" data-slug-hash="rdyRrm" data-default-tab="result" data-user="bindloss" data-embed-version="2" data-pen-title="First play around with grid" class="codepen">See the Pen <a href="https://codepen.io/bindloss/pen/rdyRrm/">First play around with grid</a> by Sam Bindloss (<a href="https://codepen.io/bindloss">@bindloss</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+		<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+		
+		<p>After understanding the basics, from setting the grid-template-columns to spanning blocks over different rows and columns, I could instantly see the potential. So I thought, why not make something fun with this new technology?</p>
+		
+		<h3 class="blog-headings">Treading into unknown territory</h3>
+		
+		<p>The codepen below is just showing off the ability of CSS grid but doesn't have much purpose. Imagine trying to create something like this with floats or flexbox? </p>
+		
+		<p data-height="397" data-theme-id="dark" data-slug-hash="BrRLEW" data-default-tab="result" data-user="bindloss" data-embed-version="2" data-pen-title="Fun with CSS Grid" class="codepen">See the Pen <a href="https://codepen.io/bindloss/pen/BrRLEW/">Fun with CSS Grid</a> by Sam Bindloss (<a href="https://codepen.io/bindloss">@bindloss</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+		<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+		
+		<p>This example involved adding a black background colour to all of the empty divs. It contains 8 columns with the furthest left and right columns using only 1fr of the space while the 6 columns in the middle take up the remaining amount of space while also being 3x wider. The rest of the work that needed to be done was to 'creatively' show off transparent blocks that would reveal the background image.</p>
+		
+		<p>This was very easy to do, as all I had to do was target the divs that were situated above the parts of the image I wanted to show, give it a transparent background colour and span it across columns or vertically with rows. You can view the code here: <a href="https://codepen.io/bindloss/pen/BrRLEW">Codepen example</a>.</p>
+		
+		<h3 class="blog-headings">All of these things are great... But what about browser support?</h3>
+		
+		<p>As of writing this in March 2018, browser support is starting to look pretty good for CSS grid. With a few exceptions, (Opera mini and old versions of Chrome and Safari) grid is now able to establish itself as the go-to technology for creating grid-based layouts. See figure 2 for a table displaying the browser support for grid.</p>
+		
+		<figure>
+			<img src="images/grid-browser-support.jpg" alt="Table displaying the browser support for CSS Grid">
+			
+			<figcaption class="image-caption">
+				Figure 2
+				<br>
+				Table displaying the current browser support for CSS Grid
+			</figcaption>
+		</figure>
+		
+		<h3 class="blog-headings">Time to use grid for something useful</h3>
+		
+		<p>I'm always looking to improve my personal profile. Whenever I learn something new with CSS and JavaScript, I instantly want to go back and change my whole site and make it better. Recently, I have been unimpressed with my current layout for my collection of blog posts, so I thought "Why not use grid to switch up the layout?"</p>
+			
+		<h3 class="blog-headings">Planning in photoshop</h3>
+		
+		<p>Before I started getting stuck into the code, I knew I could play around with a few ideas for layouts before I started coding. This would have saved me a lot of time and gave me structured guidelines to follow for when I started to implement the code (Figure 3).</p>
+		
+		<figure>
+			<img src="images/grid-photoshop.png" alt="Photoshop mockup for the proposed plan for the new blog page">
+			
+			<figcaption class="image-caption">
+				Figure 3
+				<br>
+				Photoshop mockup for the layout of the new blog page
+			</figcaption>
+		</figure>
+		
+		<h3 class="blog-headings">Coding time</h3>
+		
+		<p>The plan was to have a grid layout for screens larger than 767 pixels (768 pixel is the width of an iPad) and to have a single column layout anything below that width. The approach I took was to use display:grid for anything above the 767px benchmark and used flex-direction:column with a media query for anything below that width.</p>
+		
+		<h4 class="blog-headings small-h4">Desktop improvements (Figure 4)</h4>
+		
+		<figure>
+			<img src="images/new-blog-post.jpg" alt="Example of the improved blog post on desktop">
+			
+			<figcaption class="image-caption">
+				Figure 4
+				<br>
+				New and improved grid layout for blog page on desktop
+			</figcaption>
+		</figure>
+	
+		<h3 class="blog-headings">Evaluation</h3>
+		
+		<!-- Use this for ending sentence -->
+		<p>So if this blog post hasn't persuaded you enough and you're still on the fence about applying it to your work, then just know this: "Applying new technologies helps the industry embrace newer and better formats. It helps us grow as a community. A community we so love, and want to grow" <a href="https://medium.com/flexbox-and-grids/should-you-learn-the-css-grid-or-not-3e8c93a3619b">(Emmanuel, 2017:online)</a>.</p>
+		
+		<h3 class="blog-headings">References</h3>
+		
+		<p>Andrew, R. (2017) <em>The new CSS layout.</em> New York: A Book Apart.</p>
+		
+		<p>Emmanuel, 0. (2017) <em>How To Approach CSS layouts in 2017  —  and beyond.</em> Medium. [Online] [Accessed on 13th March 2018] <a href="https://medium.com/flexbox-and-grids/css-flexbox-grid-layout-how-to-approach-css-layouts-in-2017-and-beyond-685deef03e6c">https://medium.com/flexbox-and-grids/css-flexbox-grid-layout-how-to-approach-css-layouts-in-2017-and-beyond-685deef03e6c</a></p>
+		
+		<p>Emmanuel, O. (2017) <em>Should you learn the CSS Grid or not?</em> Medium. [Online] [Accessed on 16th March 2018] <a href="https://medium.com/flexbox-and-grids/should-you-learn-the-css-grid-or-not-3e8c93a3619b">https://medium.com/flexbox-and-grids/should-you-learn-the-css-grid-or-not-3e8c93a3619b</a></p>
+		
+		<p>Franchetti, J. (2018) <em>Jo Franchetti on CSS grid.</em> Presentation at SpacePortx, Manchester, 25th January.</p>
+		
+	</section>
+	
+	<footer>
+		<ul class="social-icons" id="contact">
+			<li>
+				<a target="_blank" href="https://twitter.com/SamBindloss" class="twitter"><i class="fab fa-twitter fa-logo"></i></a>
+			</li>
+			<li>
+				<a target="_blank" href="https://uk.linkedin.com/in/sam-bindloss-62516a103" class="linkedin"><i class="fab fa-linkedin fa-logo"></i></a>
+			</li>
+		</ul>
+	</footer>
+
+</body>
+
+	<script src="../script.js" type="text/javascript">
+
+	</script>
+
+</html>

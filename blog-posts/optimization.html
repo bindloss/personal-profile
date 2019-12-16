@@ -13,13 +13,13 @@
         <![endif]-->
 
 	<!-- Font awesome and Favicon -->
-	<link href="images/favicon1.ico" rel="icon" type="image/ico">
+	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
 	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 	
 	<title>Performance and optimisation - Blog Post</title>
 
 	<!-- Google analytics 	-->
-
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-102699117-1"></script>
 	<script>
@@ -34,10 +34,9 @@
 
 	</script>
 
-	<link rel="stylesheet" href="/style.css">
+	<link rel="stylesheet" href="../style.css">
 
 	<!-- 	Google Fonts 	 -->
-
 	<link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
@@ -47,15 +46,25 @@
 </head>
 
 <body id="top">
-	<header>
 
+	<header>
 		<div class="nav-container">
 			<nav>
 				<ul>
-					<li><a href="/index.html">Home</a></li>
-					<li><a href="/portfolio.html">Portfolio</a></li>
-					<li><a href="/blog.html">Blog</a></li>
-					<li><a href="/contact.html">Contact</a></li>
+					<li>
+						<a href="../index.html" class="nav-link">Home</a>
+					</li>
+					<li>
+						<a href="../index.html#portfolio" class="nav-link">Work</a>
+					</li>
+					<!-- Logo here -->
+					<a href="../index.html" class="nav-logo"><img class="nav-logo" src="../images/SB-logo.png" alt="Logo for Sam Bindloss"></a>	
+					<li>
+						<a href="../index.html#blog" class="nav-link">Blog</a>
+					</li>
+					<li>
+						<a href="#contact" class="nav-link">Contact</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
@@ -63,19 +72,17 @@
 
 	<button title="Back to top" id="myBtn" class="scroll" role="button">
         <span class="arrow-up">
-        	<img src="/images/chevron-up.png" alt="Up arrow" width="32" height="32">
+        	<img src="../images/chevron-up.png" alt="Up arrow" width="32" height="32">
         </span>
     </button>
 
-	<section class="blog-banner">
-
-		<h1 class="main-blog-heading">Performance and Optimisation</h1>
-		<p>Blog post</p>
-
-	</section>
-
 	<section class="blog-post-container">
-
+		
+		<h1 class="main-blog-heading">Performance and Optimisation<b class="large-dot">◿</b></h1>
+		<h2 class="secondary-blog-heading">Blog post</h2>
+		
+		<h3 class="date">Please note: this blog post was written in 2017 so some information may be outdated.</h3>
+		
 		<h2 class="large-blog-heading">"Why have I run out of 4g?"</h2>
 
 		<p>The words above are not something you want any of your users to say. In this blog post, I discuss how to increase the performance of web pages through the use of optimisation and will delve into some of the techniques used.</p>
@@ -138,36 +145,21 @@
 		</ul>
 
 	</section>
-
-		<footer>
 	
-		<div class="footer-container">
-
-			<div class="col-2">
-				<h4>Available for hire</h4>
-
-				<p>If you're interested in my services, please don't hesitate to drop me an <a href="contact.html">E-mail</a> or follow me on my active social media accounts.</p>
-			</div>
-
-			<div class="col-1">
-				<h4>Social Media:</h4>
-				
-				<p><a href="https://github.com/bindloss"><i class="fab fa-github-square"></i></a></p>
-				
-				<p><a href ="https://twitter.com/SamBindloss"><i class="fab fa-twitter-square"></i></a></p>
-				
-				<p><a href="https://www.linkedin.com/in/sam-bindloss-62516a103/"><i class="fab fa-linkedin"></i></a></p>
-				
-			</div>
-
-			<div class="col-1">
-				<h4>&copy; Sam Bindloss</h4>
-				<p><a href="http://www2.mmu.ac.uk/" title="MMU Homepage"> MMU 2018</a></p>
-			</div>
-		</div>
+	<footer>
+		<ul class="social-icons" id="contact">
+			<li>
+				<a target="_blank" href="https://twitter.com/SamBindloss" class="twitter"><i class="fab fa-twitter fa-logo"></i></a>
+			</li>
+			<li>
+				<a target="_blank" href="https://uk.linkedin.com/in/sam-bindloss-62516a103" class="linkedin"><i class="fab fa-linkedin fa-logo"></i></a>
+			</li>
+		</ul>
 	</footer>
 	
-	<script src="/script.js"></script>
 </body>
+
+<script src="../script.js" type="text/javascript">
+</script>
 
 </html>

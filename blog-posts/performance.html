@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Blog post about the importance of website performance and optimisation. Will also teach you methods and techniques in how to monitor and improve your websites performance through handy tips and tricks.">
+	<meta name="keywords" content="Front-end development, Blog post, Sam Bindloss, Web performance and optimisation, Preloading, Google chrome dev tools, Networking, Monitoring website performance">
+	<meta name="author" content="Sam Bindloss">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!--[if lt IE 9]> 
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+	<![endif]-->
+
+	<!-- Google analytics 	-->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-102699117-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-102699117-1');
+
+	</script>
+
+	<!-- Font awesome and Favicon -->
+	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+	<title>Advanced performance and optimisation - Sam Bindloss</title>
+
+	<link rel="stylesheet" href="../style.css">
+
+	<!-- 	Google Fonts 	 -->
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+
+</head>
+
+<body id="top">
+	<header>
+		<div class="nav-container">
+			<nav>
+				<ul>
+					<li>
+						<a href="../index.html" class="nav-link">Home</a>
+					</li>
+					<li>
+						<a href="../index.html#portfolio" class="nav-link">Work</a>
+					</li>
+					<!-- Logo here -->
+					<a href="../index.html" class="nav-logo"><img class="nav-logo" src="../images/SB-logo.png" alt="Logo for Sam Bindloss"></a>	
+					<li>
+						<a href="../index.html#blog" class="nav-link">Blog</a>
+					</li>
+					<li>
+						<a href="#contact" class="nav-link">Contact</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<button title="Back to top" id="myBtn" class="scroll" role="button">
+        <span class="arrow-up">
+        	<img src="../images/chevron-up.png" alt="Up arrow" width="32" height="32">
+        </span>
+    </button>
+	
+	<section class="blog-post-container">
+	
+		<h1 class="main-blog-heading">Advanced performance and optimisation<b class="large-dot">◿</b></h1>
+		<h2 class="secondary-blog-heading">Blog post</h2>
+		
+		<h3 class="date">Please note: this blog post was written in 2017 so some information may be outdated.</h3>
+		
+		<h3 class="blog-headings">Aim</h3>
+		
+		<p>To apply tools and techniques that can improve the performance of websites.</p>
+		
+		<h3 class="blog-headings">Objectives</h3>
+		
+		<ul class="blog-list">
+			<li>To understand perceived performance and how it can benefit your site</li>
+			<li>To gain a basic understanding of Chrome's dev tools and how to monitor performance</li>
+			<li>To apply resource hints that can be used to help improve performance</li>
+		</ul>
+
+		<p>This blog post will be emphasising the importance of website performance on a much more advanced level than my <a href="optimization.html">previous blog post on this subject.</a> It will cover tips and techniques every front-end developer <strong>needs</strong> to know, whether you are working on a large-scale website or even smaller projects. Because...</p>
+
+		<h3 class="blog-headings">Faster is better, less is more</h3>
+		
+		<p>Back in November 2017, I was lucky enough to get tickets for a <a href="https://twitter.com/csswizardry">Harry Roberts</a> advanced CSS and performance workshop (Figure 1).</p>
+		
+		<figure>
+			<img src="images/harry-roberts.jpg" alt="Harry Roberts giving a talk on the importance of decreasing website load times">
+			
+			<figcaption class="image-caption">
+				Figure 1
+				<br>
+				Harry Roberts giving a talk on the tools and techniques you can use to monitor and  improve website performance.
+			</figcaption>
+		</figure>
+		
+		<p>Harry spoke about the perceived performance of websites and explained how fast it <em>is</em>, and how fast it <em>feels</em> are two very different things. For example, the reason why mirrors were implemented into all elevators was to distract people during the ride; “In a usage survey, customers commented that the lifts were faster, although the speed, was, exactly the same” <a href="http://www.astarlifts.com/en/blog-lifts/lifts-lifts/do-you-know-why-lifts-carry-mirrors">(ASTARLIFTS, 2017:online)</a>.</p>
+		
+		<p>So how does the perceived performance of an elevator relate to websites? </p> 
+		
+		<p>Upon conducting further research, I found that Trainline "reduced overall latency by 0.3 seconds... This resulted in customers spending an extra <strong>£8m a year</strong> <a href="https://www.youtube.com/watch?v=ai-6qwT6ES8&feature=youtu.be&t=462">(Holt, 2016:7min 42)</a>. On top of this, an article from Double Click by Google shows that "53% of visits are abandoned if a mobile site takes more than 3 seconds to load" <a href="https://www.doubleclickbygoogle.com/articles/mobile-speed-matters/">(Shellhammer, 2016:online)</a>. That's a <strong>big problem</strong>.</p>
+		
+		<figure>
+			<img class="full-image" src="images/double-click-google.png" alt="Statistics showing the probability of bounce rate increasing on mobile devices when performance is poor">
+			
+			<img class="phone-image" src="images/double-click-google-mobile.png" alt="Statistics showing the probability of bounce rate increasing on mobile devices when performance is poor">
+
+			<figcaption class="image-caption">
+				<em>Figure 2</em>
+				<br><a href="https://think.storage.googleapis.com/docs/mobile-page-speed-new-industry-benchmarks.pdf">Statistics showing the probability of bounce rate increasing on mobile devices when performance is poor</a>
+			</figcaption>
+		</figure>
+
+		<p>These examples alone show how much more attention web performance is receiving now. Companies are willing to go to extensive lengths just to cut off milliseconds of load time. However, you may be wondering, "why should I bother"?</p>
+		
+		<h3 class="blog-headings">The moral side of performance</h3>
+		
+		<p>With the internet being so regularly used as it is today, it's imperative to understand that many of your sites' users may be:</p>
+		
+		<ul class="blog-list">
+			<li>On a capped data plan</li>
+			<li>Unable to download poorly optimised images</li>
+			<li>Situated within a poor connectivity region</li>
+		</ul>
+		
+		<p>In order to make the web more accessibile for everyone, "we must give up thinking that we can know people's connective-contexts, and enable a web that's accessible regardless of connection speed" (Kalbag, 2017:32).</p>
+		
+		<p>Another question every developer needs to ask themselves before releasing a live website is "am I prioritising my ads over my users"? This is known as 'header-bidding' and is evil, but sadly, quite common. "Publishers are already larding their pages with third-party ad tags, which have slowed down web pages and forced alienated readers to install ad blockers" <a href="https://digiday.com/media/wtf-header-bidding/">(Bilton, 2015:online)</a>.</p>
+		
+		<p>Now you may be wondering how you can improve the performance of your website. Luckily, Google Chrome dev tools allow us developers to monitor our load times and therefore, enables us to see what is slowing down the site. Let's take a look...</p>
+		
+		<h3 class="blog-headings">Google Chrome's inspector</h3>
+		
+		<p>Firstly, to open up Google Chrome dev tools you need to have an updated version of Google Chrome installed, then right-click anywhere on the page you want to test and click "Inspect". Once the window has opened up, make sure you click the "Network" tab and "Disable cache" (Figure 3).</p>
+		
+		<figure>
+			<img src="images/dev-tools1.jpg" alt="Opening up dev tools and opening the network tab with disable cache switched off">
+
+			<figcaption class="image-caption">
+				<em>Figure 3</em>
+				<br>Opening up Google Chrome dev tools and making sure disable cache is switched on
+			</figcaption>
+		</figure>
+		
+		<p>These dev tools can be especially useful in firstly, noticing whether any content of your page needs optimising (mostly images). Secondly, to understand what resource hints you should be using in order to make the most important files load first. You even have the option to throttle your own connection speed down to poorer connections (such as 3g and 4g) so you can do more insightful testing (Figure 4).</p>
+		
+		<figure>
+			<img src="images/dev-tools2.png" alt="Screenshot giving instructions where you can throttle the connection of your own internet speed">
+
+			<figcaption class="image-caption">
+				<em>Figure 4</em>
+				<br>The option that lets you throttle your own connection speed for testing.
+			</figcaption>
+		</figure>
+		
+		<!--
+		
+		<p>Another online resource that is especially useful when analysing a websites connection speeds is <a href="https://www.webpagetest.org/">Web Page Test</a> as it provides a more comprehensive waterfall with extremely useful data (useful for showing to clients) and offers web page testing from different servers around the world.</p> 
+		
+		-->
+		
+		<h3 class="blog-headings">Resource Hints</h3>
+		
+		<p>Resource hints are single line additions that you can add to the &#60;head&#62; of your documents in order to tell the browser what to prioritise. These are essentially front-end freebies that every developer should be aware of.</p>
+		
+		<!--
+		
+		<p>While on the network tab and upon refreshing the page you will see a waterfall graph which measures the network performance of your site on your current internet connection. As discussed earlier in this blog post, the most important bit is to make sure the user is percieving the content as soon as possible rather than waiting for the whole DOM to load so we can retain their attention and decrease bounce rates. This is where resource hints such as 'preload' can be extremely effective.
+		</p>
+		
+		-->
+		
+		<h4 class="blog-headings small-h4">Preload</h4>
+		
+		<p data-height="370" data-theme-id="dark" data-slug-hash="qoRaWw" data-default-tab="html,result" data-user="bindloss" data-embed-version="2" data-pen-title="Preload" class="codepen">See the Pen <a href="https://codepen.io/bindloss/pen/qoRaWw/">Preload</a> by Sam Bindloss (<a href="https://codepen.io/bindloss">@bindloss</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+		<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+		
+		<p>The use of 'preload' can be seen above and is used for anything needed within the page, but whose natural download point can be quite late (use chrome dev tools to see what content loads late). The rule of thumb I would stick to is to preload anything above the fold such as large banner images and fonts in order to at least display a UI skeleton for users' accessing your site on a slower connection.</p>
+		
+		<p>Preloading is also especially useful for responsive images as you can choose which image to load at a certain screen width, rather than loading all of them at once. However, keep in mind that not all browsers fully support preloading yet.</p>
+		
+		<figure>
+			<img src="images/preload-browser-support.jpg" alt="Graph displaying the current browser support for preloading">
+
+			<figcaption class="image-caption">
+				Table displaying the current browser support for preloading
+			</figcaption>
+		</figure>
+		
+		<h4 class="blog-headings small-h4">Preconnect</h4>
+		
+		<p data-height="327" data-theme-id="dark" data-slug-hash="xWgGvP" data-default-tab="html" data-user="bindloss" data-embed-version="2" data-pen-title="xWgGvP" class="codepen">See the Pen <a href="https://codepen.io/bindloss/pen/xWgGvP/">xWgGvP</a> by Sam Bindloss (<a href="https://codepen.io/bindloss">@bindloss</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+		<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+		
+		<p>Preconnecting "allows the browser to set-up early connections before an HTTP request is actually sent to the server. This, in turn, prevents roundtrip latency and saves time for users" <a href="https://www.keycdn.com/blog/resource-hints/">(Jackson, 2018:online)</a>. In the example above I have also included DNS-prefetching as preconnect still isn't fully compatible with all browsers.</p>
+
+		<figure>
+			<img src="images/preconnect-browser-support.jpg" alt="Graph displaying the current browser support for preconnecting">
+
+			<figcaption class="image-caption">
+				Table displaying the current browser support for preconnecting.
+			</figcaption>
+		</figure>
+		
+		<h4 class="blog-headings small-h4">Prefetch</h4>
+		
+		<p data-height="170" data-theme-id="dark" data-slug-hash="RMKrZR" data-default-tab="html" data-user="bindloss" data-embed-version="2" data-pen-title="Prefetch" class="codepen">See the Pen <a href="https://codepen.io/bindloss/pen/RMKrZR/">Prefetch</a> by Sam Bindloss (<a href="https://codepen.io/bindloss">@bindloss</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+		<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+		
+		<p>Prefetching can request anything on subsequent pages to be loaded and will download it in the background. For example, if a large video file is on a subsequent page you can prefetch it so it can be added to the cache, enabling the video to download faster when the user arrives on that page.</p>
+		
+		<figure>
+			<img src="images/prefetch-browser-support.jpg" alt="Graph displaying the current browser support for prefetching">
+
+			<figcaption class="image-caption">
+				Table displaying the current browser support for prefetching.
+			</figcaption>
+		</figure>
+		
+		<h4 class="blog-headings small-h4">Prerender</h4>
+		
+		<p data-height="320" data-theme-id="dark" data-slug-hash="zWNrVY" data-default-tab="html,result" data-user="bindloss" data-embed-version="2" data-pen-title="zWNrVY" class="codepen">See the Pen <a href="https://codepen.io/bindloss/pen/zWNrVY/">zWNrVY</a> by Sam Bindloss (<a href="https://codepen.io/bindloss">@bindloss</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+		<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+		
+		<p>Prerendering allows you to prerender entire pages in the background. Be careful though, because if you are going to use this you need to make sure you anticipate the user's next move correctly. A good example would be to prerender the page that the main CTA (Call To Action) links to.</p>
+		
+		<figure>
+			<img src="images/prerender-browser-support.jpg" alt="Graph displaying the current browser support for prerendering">
+
+			<figcaption class="image-caption">
+				Table displaying the current browser support for prerendering
+			</figcaption>
+		</figure>
+		
+		<h3 class="blog-headings">Evaluation</h3>
+		
+		<p>After developing a stronger understanding of these tools and techniques in monitoring and improving website performance, I decided to apply these tricks to my own website. As discussed earlier in this blog post about how important perceived performance can be, by preloading my large banner image I able to make it  appear much sooner than before.</p>
+		
+		<h4 class="blog-headings small-h4">Before preloading</h4>
+		
+		<figure>
+			<img src="images/preload-dev-tools.png" alt="Image displaying the effects before preloading my large banner image">
+
+			<figcaption class="image-caption">
+				Image displaying where the banner image was loading from before preloading
+			</figcaption>
+		</figure>
+		
+		<h4 class="blog-headings small-h4">After preloading</h4>
+		
+		<figure>
+			<img src="images/preload-after.png" alt="Image displaying the effects after preloading my large banner image">
+
+			<figcaption class="image-caption">
+				Figure 5<br>
+				Image displaying where the banner image laods from after using preload
+			</figcaption>
+		</figure>
+		
+		<p>In figure 5, you'll notice shorter, parallel loading times. This is what you want your site to be aiming for, by delaying the amount of time it takes for 1 connection to get to the next. HTTP 1.1 only allows us to make 6 connections at a time to avoid potential overloading issues. Your connections are valuable, so don't waste them.</p>
+		
+		<p>Luckily, technology is always developing...</p>
+		
+		<h3 class="blog-headings">The future</h3>
+		
+		<p>HTTP2 will eventually be the most widely used network protocol as it "allows browsers to parallelize multiple downloads using only one connection" <a href="https://www.smashingmagazine.com/2017/10/improving-performance-security/">(Krummenacher, 2017:online).</a> So you can imagine that in the future, there will be plenty more tips and tricks to increase website performance to keep up with the ever-changing demands of internet users around the world.</p>
+		
+		<h3 class="blog-headings">References</h3>
+		
+		<p>ASTARLIFTS. (2017) <em>Do you know why lifts carry mirrors?</em> [Online] [Accessed on 10th March 2018] <a href="http://www.astarlifts.com/en/blog-lifts/lifts-lifts/do-you-know-why-lifts-carry-mirrors">http://www.astarlifts.com/en/blog-lifts/lifts-lifts/do-you-know-why-lifts-carry-mirrors</a></p>
+		
+		<p>Bilton, R. (2015) <em>WTF is header bidding?</em> Digiday. [Online] [Accessed on 13th March 2018] <a href="https://digiday.com/media/wtf-header-bidding/">https://digiday.com/media/wtf-header-bidding/</a></p>
+		
+		<p>Holt, M. (2016) <em>From Application Metrics to Customer Experience Metrics Fullstack Visibility.</em> [Online video] [Accessed on 12th March 2018]<a href="https://www.youtube.com/watch?v=ai-6qwT6ES8&feature=youtu.be&t=462"> https://www.youtube.com/watch?v=ai-6qwT6ES8&feature=youtu.be&t=462</a></p>
+		
+		<p>Jackson, B. (2018) <em>Resource hints - What is preload, prefetch and preconnect.</em> KeyCDN.com [Online] [Accessed on 15th March 2018] <a href="https://www.keycdn.com/blog/resource-hints">https://www.keycdn.com/blog/resource-hints/</a></p>
+			
+		<p>Kalbag, L. (2017) <em>Accessibility for everyone.</em> New York. A Book Apart.</p>
+		
+		<p>Krummenacher, J. (2017) <em>Quick wins for improving performance and security of your website</em> [Online] [Accessed on 15th March 2018] <a href="https://www.smashingmagazine.com/2017/10/improving-performance-security/">https://www.smashingmagazine.com/2017/10/improving-performance-security/</a></p>
+		
+		<p>Shellhammer, A. (2016) <em>The need for mobile speed: How mobile latency impacts publisher revenue</em> [Online] [Accessed on 12th March 2018] <a href="https://www.doubleclickbygoogle.com/articles/mobile-speed-matters/">https://www.doubleclickbygoogle.com/articles/mobile-speed-matters/</a></p>
+	
+	</section>
+	
+	<footer>
+		<ul class="social-icons" id="contact">
+			<li>
+				<a target="_blank" href="https://twitter.com/SamBindloss" class="twitter"><i class="fab fa-twitter fa-logo"></i></a>
+			</li>
+			<li>
+				<a target="_blank" href="https://uk.linkedin.com/in/sam-bindloss-62516a103" class="linkedin"><i class="fab fa-linkedin fa-logo"></i></a>
+			</li>
+		</ul>
+	</footer>
+
+</body>
+
+<script src="../script.js" type="text/javascript">
+
+</script>
+
+</html>

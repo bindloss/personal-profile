@@ -1,166 +1,188 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Fab Pub Company</title>
+	<title>Fab Pub Company</title>
+	<link rel="shortcut icon" href="../../../favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="../../../style.css">
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Google analytics 	-->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-102699117-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
 
-<link href="http://55060509.webdevmmu.uk/style-guide/global.css" rel="stylesheet" type="text/css" />
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
 
+		gtag('config', 'UA-102699117-1');
+
+	</script>
 </head>
 
 <body>
-<div class="container">
+	<header>
+		<div class="nav-container">
+			<nav>
+				<ul>
+					<li>
+						<a href="../../../index.html" class="nav-link">Home</a>
+					</li>
+					<li>
+						<a href="../../../index.html#portfolio" class="nav-link">Work</a>
+					</li>
+					<!-- Logo here -->
+					<a href="../../../index.html" class="nav-logo"><img class="nav-logo" src="../../../images/SB-logo.png" alt="Logo for Sam Bindloss"></a>
+					<li>
+						<a href="../../../index.html#blog" class="nav-link">Blog</a>
+					</li>
+					<li>
+						<a href="#contact" class="nav-link">Contact</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<main class="prog-container">
+		
+		<button title="Back to top" id="myBtn" class="scroll" role="button">
+			<span class="arrow-up">
+				<img src="../../../images/chevron-up.png" alt="Up arrow" width="32" height="32">
+			</span>
+		</button>
 
-<h1>Welcome to the Fab Pub Company (Est 2016)</h1>
+		<h1 class="prog-main-heading">Pub Menu</h1>
+		
+		<div id="leftDiv" class="panel">
 
-<div id="leftDiv" class="panel">
+			<h2 class="prog-sub-header center-text">Have a look at our menus...</h2>
+			
+			<div class="menu-tabs-container">
 
-            <h2>Have a look at our menus...</h2>
+				<input type="button" id="button1" value="Click here for Today's menu">
 
+				<input type="button" id="button2" value="Click here for Saturday's menu">
 
-<input type="button" id="button1" value="Click here for Today's menu">
+				<input type="button" id="button3" value="Click here for Sunday's menu">
+			</div>
 
-<input type="button" id="button2" value="Click here for Saturday's menu">
+			<ul class="blog-list" id="menu"></ul>
 
-<input type="button" id="button3" value="Click here for Sunday's menu">
-
-
-<ul id="menu"></ul>
-           
-        </div>
-
-
- <div id="searcharea" class="panel side-by-side">
-            <label for="search">Please search for a menu item</label>
-
-`<input type="search" name = "search" id="search" placeholder="Type menu item here:">`
-
- 
-            <div id="update"></div>
-        </div>
-
-        <div id="rightDiv" class="panel side-by-side">
-
-    <img src="images/pub1.jpeg" id="mainImage" alt="A display of your future experience at the Fab Pub" width="400" height="350" class="articleImage" />
-            
-
-            <p>Visit our pubs and enjoy a convivial atmosphere, fine wines and food of a high quality as pictured in these royalty-free graphics.</p>
-
-
-        </div>
-	</div>
-
-<!-- <script src="jquery.js"></script>-->
-
-<script>
-
-var button1 = document.getElementById("button1");
-button1.addEventListener("click", function() { loadAjax("menu.json"); } );
-
-var button2 = document.getElementById("button2");
-button2.addEventListener("click", function() {  loadAjax("menu1.json"); } );
-
-var button3 = document.getElementById("button3");
-button3.addEventListener("click", function() { loadAjax("menu2.json"); } );
+		</div>
 
 
-function loadAjax(jsonData) {
+		<div id="update"></div>
 
-var request = new XMLHttpRequest();
-request.open('GET', jsonData);
+		<div id="rightDiv" class="panel side-by-side">
 
-request.onreadystatechange = function() {
-	if ((request.readyState===4) && (request.status===200)) {
-	var menuItems = JSON.parse(request.responseText);
-	var output = " ";
-	for (var key in menuItems) {
-	output += "<li> <strong>" + menuItems[key]["Item Name"] + "</strong> " + " " + "<br>" + menuItems[key]["Description"] + " " + "<br>" +
-    menuItems[key]["Price"] + " </li>";
-	}
-var menu = document.getElementById("menu");
-menu.innerHTML = output;
-	} else if (request.readyState === 0) {
-window.alert("Sorry, the connection with the server has failed");
-}
-}
-request.send();
-}
+			<img src="images/pub1.jpeg" id="mainImage" alt="A display of your future experience at the Fab Pub" width="400" height="350" class="articleImage" />
 
 
-/* IMAGE CAROUSEL */
+			<p>Visit our pubs and enjoy a convivial atmosphere, fine wines and food of a high quality as pictured in these royalty-free graphics.</p>
+		</div>
+		
+		<footer>
+			<ul class="social-icons" id="contact">
+				<li>
+					<a target="_blank" href="https://twitter.com/SamBindloss" class="twitter"><i class="fab fa-twitter fa-logo"></i></a>
+				</li>
+				<li>
+					<a target="_blank" href="https://uk.linkedin.com/in/sam-bindloss-62516a103" class="linkedin"><i class="fab fa-linkedin fa-logo"></i></a>
+				</li>
+			</ul>
+		</footer>
 
+	</main>
+	
+	<script src="../../../script.js" type="text/javascript"></script>
 
-var myImage = document.getElementById("mainImage");
-
-var imageArray = ["images/pub2.jpeg","images/pub3.jpeg","images/pub4.jpeg", "images/pub5.jpeg","images/pub1.jpeg"];
-				 
-var imageIndex = 0;
-
-function changeImage() {
-	myImage.setAttribute("src",imageArray[imageIndex]);
-	imageIndex++;
-	if (imageIndex >= imageArray.length) {
-		imageIndex = 0;
-	}
-}
-
-var intervalHandle = setInterval(changeImage,3000);
- 
- myImage.onclick =  function() {
-	clearInterval(intervalHandle);
-} 
-
-
-/* 		DATE		*/
-
-var myDate = new Date(2017, 04, 28); // Weekday
-var myDate = new Date(2017, 04, 29); // Saturday
-var myDate = new Date(2017, 04, 30); // Sunday
-
-var today = myDate.getDay();
-
-if (today > 0 && today < 6) {
-loadAjax("menu.json");
-
-} else if (today == 0) {
-loadAjax("menu2.json");
-
-
-} else {
-loadAjax("menu1.json");
-
-}
-
-// 	 LIVE SEARCH
-
-// Attempted but taken out due to results returning a // value of undefined:
-
-/*
-
-$('#search').keyup(function() {
-	var searchField = $('#search').val();
-	var myExp = new RegExp(searchField, "i");
-	$.getJSON('menu.json', function(data) {
-		var output = '<ul id="searchresults">';
-		$.each(data, function(key, val) {
-			if ((val.name.search(myExp) != -1) ||
-			(val.bio.search(myExp) != -1)) {
-				output += '<li>';
-				output += '<h2>'+ val.name +'</h2>';
-				output += '<img src="images/'+ val.shortname +'_tn.jpg" alt="'+ val.name +'" />';
-				output += '<p>'+ val.bio +'</p>';
-				output += '</li>';
-			}
+	<script>
+		var button1 = document.getElementById("button1");
+		button1.addEventListener("click", function() {
+			loadAjax("menu.json");
 		});
-		output += '</ul>';
-		$('#update').html(output);
-	}); //get JSON
-});
 
-*/
+		var button2 = document.getElementById("button2");
+		button2.addEventListener("click", function() {
+			loadAjax("menu1.json");
+		});
+
+		var button3 = document.getElementById("button3");
+		button3.addEventListener("click", function() {
+			loadAjax("menu2.json");
+		});
 
 
-</script>
+		function loadAjax(jsonData) {
 
+			var request = new XMLHttpRequest();
+			request.open('GET', jsonData);
+
+			request.onreadystatechange = function() {
+				if ((request.readyState === 4) && (request.status === 200)) {
+					var menuItems = JSON.parse(request.responseText);
+					var output = " ";
+					for (var key in menuItems) {
+						output += "<li> <strong>" + menuItems[key]["Item Name"] + "</strong> " + " " + "<br>" + menuItems[key]["Description"] + " " + "<br>" +
+							menuItems[key]["Price"] + " </li>";
+					}
+					var menu = document.getElementById("menu");
+					menu.innerHTML = output;
+				} else if (request.readyState === 0) {
+					window.alert("Sorry, the connection with the server has failed");
+				}
+			}
+			request.send();
+		}
+
+		/* IMAGE CAROUSEL */
+
+		var myImage = document.getElementById("mainImage");
+
+		var imageArray = ["images/pub2.jpeg", "images/pub3.jpeg", "images/pub4.jpeg", "images/pub5.jpeg", "images/pub1.jpeg"];
+
+		var imageIndex = 0;
+
+		function changeImage() {
+			myImage.setAttribute("src", imageArray[imageIndex]);
+			imageIndex++;
+			if (imageIndex >= imageArray.length) {
+				imageIndex = 0;
+			}
+		}
+
+		var intervalHandle = setInterval(changeImage, 3000);
+
+		myImage.onclick = function() {
+			clearInterval(intervalHandle);
+		}
+
+		/* 		DATE		*/
+
+		var myDate = new Date(2017, 04, 28); // Weekday
+		var myDate = new Date(2017, 04, 29); // Saturday
+		var myDate = new Date(2017, 04, 30); // Sunday
+
+		var today = myDate.getDay();
+
+		if (today > 0 && today < 6) {
+			loadAjax("menu.json");
+
+		} else if (today == 0) {
+			loadAjax("menu2.json");
+
+
+		} else {
+			loadAjax("menu1.json");
+
+		}
+
+	</script>
 
 </body>
+
 </html>

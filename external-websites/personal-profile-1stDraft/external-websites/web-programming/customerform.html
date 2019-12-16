@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>The Shirt Company</title>
+<link href="http://55060509.webdevmmu.uk/style-guide/global.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="container">
+<h1>Welcome to The Shirt Company (Est 2017)</h1>
+
+    <p>
+    	Please enter your name and place your order.
+	</p>  
+
+    <h2>Name</h2>
+
+<!-- Form elements here -->
+
+<form id="orderForm">
+
+<p>
+First name: <input type = "text" id = "firstName" placeholder="Type in first name" onkeyup="letterValidation(this)">
+
+</p>
+
+<p>Second name: <input type = "text" id = "secondName" placeholder="Type in second name" onkeyup="letterValidation(this)">
+
+</p>
+
+    <h2>Cotton Shirt</h2>
+
+<p>Price: &#163;20 per shirt</p>
+
+<p>Quantity desired: <input type = "number" id = "shirtInput" placeholder="Type number here">
+
+</p>
+
+    <h2>Cotton tie</h2>
+
+<p>Price: &#163;12 per tie</p>
+
+<p>Quantity desired: <input type = "number" id="tieInput" placeholder="Type number here"> 
+
+</p>
+
+<h2>Select customer status</h2>
+
+<p>Status:
+
+<select id="userOption">
+
+<option value="">...</option>
+<option value="opt1">Non-registered customer</option>
+<option value="opt2">Registered customer</option>
+<option value="opt3">Trade customer</option>
+
+</select>
+</p>
+
+<h2>Select delivery</h2>
+
+<p>Delivery time:</p>
+
+<p>
+
+<input type="radio" value="rad1" name="radioChoice" checked>
+7-day (&#163;2 per order)<br>
+
+<input type="radio" value="rad2" name="radioChoice">
+3-day (&#163;3 per order) <br>
+
+<input type="radio" value="rad3" name="radioChoice"> Next day (&#163;5 per order) 
+
+</p>
+
+    <h2>Check order</h2>
+
+<p>Please click here: <input type="button" id="finalOrder" value="Check your order"> </p>
+
+    </form>
+
+
+<p id="greeting"></p>
+
+<p id="results"></p>
+
+<p id="addOns"></p>
+
+<strong><p id="total"></p></strong>
+
+<em><p id="checkout"></p></em>
+
+</div>
+
+<script type="text/javascript">
+
+var button = document.getElementById("finalOrder");
+button.addEventListener("click", estimateOrder, false);
+
+	
+/* 		LETTER VALIDATION		*/
+
+function letterValidation(inputTxt) {
+
+var letters = /[^a-z]/gi;
+inputTxt.value = inputTxt.value.replace(letters, "");
+}
+
+	
+/* 		ORDER RESULTS 		*/
+	
+function estimateOrder()
+{
+
+var name1 = document.getElementById("firstName").value;
+
+	if (name1 == "") {
+window.alert("Please enter a first name")
+}
+
+var name2 = document.getElementById("secondName").value;
+
+	if (name2 == "") {
+window.alert("Please enter a second name")
+}
+
+var shirtQuantity = document.getElementById("shirtInput").value;
+
+	if (shirtQuantity == "") {
+window.alert("Please enter the quantity of shirts you wish to purchase")
+}
+
+var tieQuantity = document.getElementById("tieInput").value;
+
+	if (tieQuantity == "") {
+window.alert("Please enter the quantity of ties you wish to purchase")
+	}
+
+	
+/* 			RESULTS/SUBTOTALS 			*/
+	
+
+var shirtTotal = (shirtQuantity * 20);
+
+var tieTotal = (tieQuantity * 12);
+
+var subTotal = (shirtTotal + tieTotal);
+
+
+    document.getElementById("greeting");
+    greeting.innerHTML = "Hello " + name1 + " " + name2 + ". You have selected:";
+	
+	
+/* 		1 SHIRT/TIE QUANTITY 		*/
+
+var shirt;
+var tie;
+	
+if (shirtQuantity == 1) {
+	shirt = " Shirt";
+	subtotalDiplay = " at a cost of &#163;20 each. Subtotal: &#163;";
+	
+} else { 
+	shirt = " Shirts";
+
+}
+	
+if (tieQuantity == 1) {
+	tie = " Tie";
+	subtotalDiplay = " at a cost of &#163;12 each. Subtotal: &#163;";
+	
+} else {
+	tie = " Ties";
+}
+
+
+/*	 	NO SUBTOTAL DECLARATION 		*/
+
+var shirtSubtotalDisplay = "";
+
+var tieSubtotalDisplay = "";
+
+if (shirtQuantity == 0) {
+shirt = " Shirts";
+shirtSubtotalDisplay = "";
+shirtTotal = "";
+
+} else {
+shirtSubtotalDisplay = " at a cost of &#163;20 each. Subtotal: &#163;";
+
+}
+
+if (tieQuantity == 0) {
+tie = " Ties";
+tieSubtotalDisplay = "";
+tieTotal = "";
+
+} else {
+tieSubtotalDisplay = " at a cost of &#163;12 each. Subtotal: &#163;";
+
+}
+
+
+/* 		DROP DOWN MENU		*/
+
+var userChoice = document.getElementById("userOption").value;
+
+var userChoiceValue = "";
+	
+	if (userChoice == "") {
+window.alert("Please select customer status");
+}
+
+	if (userChoice == "opt1") {
+userChoiceValue = 0;
+
+	}
+
+	if (userChoice == "opt2") {
+userChoiceValue = subTotal * 0.10;
+
+	}
+
+
+	if (userChoice == "opt3") {
+userChoiceValue = subTotal * 0.20;
+		
+
+	}
+
+
+/* 		RADIO BUTTONS 		*/
+
+var radioChoice = document.getElementById("orderForm").radioChoice;
+
+var radioValue = "";
+
+var radioValueChoice;
+
+for (var i = 0; i < radioChoice.length; i++) {
+	if (radioChoice[i].checked) {
+	radioValue = radioChoice[i].value;
+break;
+}
+}
+
+if (radioValue === "rad1") {
+radioValueChoice = 2;
+
+}
+
+if (radioValue === "rad2") {
+radioValueChoice = 3;
+
+}
+
+
+if (radioValue === "rad3") {
+radioValueChoice = 5;
+
+}
+
+
+
+/* 		TOTAL AND CHECKOUT 		*/
+
+var orderTotal = (subTotal - userChoiceValue) + radioValueChoice;
+
+	document.getElementById("results");
+
+ results.innerHTML = "* " + shirtQuantity + shirt  + shirtSubtotalDisplay + shirtTotal + 
+"<br>" 
+    + "* " + tieQuantity + tie + tieSubtotalDisplay + tieTotal;
+
+	
+	document.getElementById("addOns").value;
+
+addOns.innerHTML = "You have qualified for a discount of &#163;" + userChoiceValue.toFixed(2) + ". The delivery charge is &#163;" + radioValueChoice.toFixed(2) + ".";
+
+	document.getElementById("total").value;
+
+total.innerHTML = "The total cost is &#163;" + orderTotal.toFixed(2);
+
+
+	document.getElementById("checkout").value;
+
+checkout.innerHTML = "If you're happy with that, please go ahead and place the order. Have an awesome day!";
+	
+}
+</script>
+</body>

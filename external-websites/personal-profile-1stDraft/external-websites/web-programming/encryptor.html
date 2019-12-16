@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Encryptor</title>
+<link rel="stylesheet" href="http://55060509.webdevmmu.uk/style-guide/global.css" />
+</head>
+<body>
+
+<div class="container"> 
+<h1>Welcome to the encryptor</h1>
+
+<p><strong>Step by step guide:</strong></p>
+<ul>
+<li>Set a key</li>
+<li>Type in any message of your choice in to the encryptor text box</li>
+<li>Then copy and paste the encrypted message provided in to the decryptor text box</li>
+</ul>
+
+<!-- KEY PANEL -->
+
+
+<div class="panel">
+<p>Please set the key required here and then enter a message below for encryption and decryption: <input type = "number" id = "keyInput" placeholder="...">
+</p>
+</div>
+
+<div id="encrypDiv" class="panel side-by-side">
+
+
+
+<!-- ENCRYPTOR PANEL -->
+
+<h2>Encryptor</h2>
+<p>Type in a message to be encrypted here:</p>
+
+<textarea id="input1" rows="4" cols="45" placeholder="Type here:" onkeyup="letterValidation(this)">
+</textarea>
+
+
+<button id ="encryptor">Enter</button> 
+
+<p>The message you have input has been encrypted as:</p>
+
+<p id="encryptorOutput"></p>
+
+	</div>
+
+
+<!-- DECRYPTOR PANEL -->
+
+<div class="panel side-by-side">
+
+<h2>Decryptor</h2>
+<p>Type in a message to be decrypted here:</p>
+
+<textarea id="input2" rows="4" cols="45" placeholder="Type here:" onkeyup="letterValidation(this)">
+</textarea>
+
+
+<button id ="decryptor">Enter</button> 
+
+<p>The message you have input has been decrypted as:</p>
+
+<p id="decryptorOutput"></p>
+
+
+</div>
+</div>
+
+
+<script>
+
+function letterValidation(inputTxt) {
+
+var letters = /[^a-z ]/gi;
+inputTxt.value = inputTxt.value.replace(letters, "");
+}
+ 
+var button = document.getElementById("encryptor");
+button.addEventListener("click", clickHandler);
+
+var alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+
+/* 		 		ENCRYPTOR 			*/
+
+
+function clickHandler() {
+
+var messageInput = document.getElementById("input1").value;
+
+document.getElementById("encryptorOutput").value;
+	
+var key = parseInt(document.getElementById("keyInput").value);
+
+
+var encryptedWord = [];
+
+for (i = 0; i < messageInput.length; i++){
+		var indexLetter1 = alphabet.indexOf(messageInput[i]);
+		
+
+if (indexLetter1 < 52) {
+var indexLetter2 = indexLetter1 += key;
+
+			
+if (messageInput[i] == ' '){
+encryptedWord.push(' ');
+			
+} else if(indexLetter2 >= 52){
+indexLetter2 = indexLetter2-alphabet.length;
+encryptedWord.push(alphabet[indexLetter2]);			
+}else{
+encryptedWord.push(alphabet[indexLetter2]);
+}
+		
+} else { 
+			
+var indexLetter2 = indexLetter1 += (key - alphabet.length);
+
+encryptedWord.push(alphabet[indexLetter2]);
+		} 
+		
+	}
+
+var finalString = encryptedWord.join("");
+
+encryptorOutput.innerHTML = finalString;
+
+
+}
+
+
+/* 		DECRYPTOR 		*/
+
+	
+var button = document.getElementById("decryptor");
+button.addEventListener("click", decryptorButton);
+
+function decryptorButton(){
+
+var decryptorInput = document.getElementById("input2").value;
+
+document.getElementById("decryptorOutput").value;
+
+var key = parseInt(document.getElementById("keyInput").value);
+
+
+var decryptedWord = [];
+
+for (i = 0; i < decryptorInput.length; i++){
+		var indexLetter3 = alphabet.indexOf(decryptorInput[i]);
+		
+
+if (indexLetter3 < 52) {
+var indexLetter4 = indexLetter3 -= key;
+	
+
+if (decryptorInput[i] == " "){
+decryptedWord.push(' ');
+			
+} else if(indexLetter4 < 0){
+	indexLetter4 = alphabet.length+indexLetter4;
+decryptedWord.push(alphabet[indexLetter4]);			
+} else {
+decryptedWord.push(alphabet[indexLetter4]);	
+}
+	
+} else { 
+indexLetter4 = indexLetter3 -= (key + alphabet.length);
+
+decryptedWord.push(alphabet[indexLetter4]);
+		} 
+		
+	}
+
+var finalString2 = decryptedWord.join("");
+
+decryptorOutput.innerHTML = finalString2;
+
+
+}
+
+
+</script>
+
+</body>
+</html>
